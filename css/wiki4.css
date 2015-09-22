@@ -1,0 +1,66 @@
+body {
+    background-color: darkseagreen;
+    width: 75%;
+    margin: auto;
+}
+
+.wrap{
+    background-color:limegreen;
+    height: 100%;
+}
+
+.header{
+    background-color: darkkhaki;
+    padding: 1%;
+    padding-left: 65%;
+        
+        
+}
+p, h1, h2, li {
+    font-family: "Arial", Times, serif;
+}
+
+.sidebar{
+    float: right;
+    background-color: darkkhaki;
+    padding-bottom: 275px  ;    
+}
+
+
+
+.content li{
+    list-style-type: none;
+    font-family: monospace;
+    padding: 2px;
+}
+
+.nav li
+{
+display: inline;
+list-style-type: none;
+}
+
+.nav a { padding: 15px 27px;
+        width: auto;
+        
+        
+}
+
+.nav a:link, #navlist a:visited
+{
+color: black;
+background-color: seagreen;
+text-decoration: none;
+}
+
+.nav a:hover
+{
+color: #fff;
+background-color: #369;
+text-decoration: none;
+}
+
+.
+.header {
+    background-color: darkolivegreen ;  
+}
