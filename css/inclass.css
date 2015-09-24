@@ -1,0 +1,83 @@
+body{
+    background-color: aqua;
+}
+
+.container{
+    background-color: aliceblue;
+}
+
+.header{
+ background-color: pink;
+    height: 45px;
+}
+
+
+.content img{
+    float:left;
+    margin: 5px;
+    
+ 
+}
+
+.header ul{
+        
+        padding-top: 10px;
+
+}
+
+nav ul li {
+        display: inline;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.header h1{
+    float: left;
+    margin: 0 50px 0 30px;
+    
+}
+.content{
+    width: 74%;
+    background-color: indianred;
+    float: left;
+}
+
+.top-content{
+    float: left;
+    width: 100%;
+    background-color: rebeccapurple;
+    clear:both;
+    
+}
+.aside{
+ float: right;
+    width: 23%;
+    padding-bottom:400px; 
+    background-color: beige;
+    
+
+}
+
+.footer{
+    background-color: dodgerblue;
+    clear:both;
+    height: 40px;
+}
+
+.description{
+    float:left;
+    width:60%;
+}
+
+.section{
+    float: left;
+    background-color: aquamarine;
+    padding: 69px;
+    
+    width: 20%;
+    top: 500px;
+    
+}
+
+.description{
+    
+}
