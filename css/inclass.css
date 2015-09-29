@@ -3,7 +3,7 @@ body{
 }
 
 .container{
-    background-color: aliceblue;
+    background-color: aquamarine;
 }
 
 .header{
@@ -37,7 +37,7 @@ nav ul li {
 }
 .content{
     width: 74%;
-    background-color: indianred;
+    background-color: aquamarine;
     float: left;
 }
 
@@ -50,7 +50,7 @@ nav ul li {
 }
 .aside{
  float: right;
-    width: 23%;
+    width: 26%;
     padding-bottom:400px; 
     background-color: beige;
     
@@ -63,6 +63,10 @@ nav ul li {
     height: 40px;
 }
 
+.footer ul{
+    list-style-type: none; text-align: center;
+}
+
 .description{
     float:left;
     width:60%;
@@ -71,10 +75,10 @@ nav ul li {
 .section{
     float: left;
     background-color: aquamarine;
-    padding: 69px;
-    
-    width: 20%;
+    padding: 65.7px;
+    width: 24%;
     top: 500px;
+    height: 25%;
     
 }
 
