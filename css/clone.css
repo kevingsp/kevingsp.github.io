@@ -1,0 +1,68 @@
+body {
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 75%;
+    margin: auto;
+    line-height: 1.25;
+}
+
+table, tr, td, th {
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    background-color: maroon;
+}
+
+h1, h2{
+   background-color:grey;
+    height: 30px;
+    width: 85%;
+}
+
+.bacon-info {
+    background: ;
+    color: white;
+    background-color: maroon;
+}
+
+.bacon-answer {
+    color: white;
+    font-family: "Times New Roman";
+    background-color: maroon;
+}
+
+.although{
+    background-color: maroon;
+    font-style: italic;
+    text-align: center;
+}
+
+lu, ul{
+ background-color: maroon;  
+    width: 48%;
+}
+
+p{
+ width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: maroon;
+}
+
+.list{
+   padding-top: 30px;
+    padding-bottom: 10px;
+    
+}
+
+.content{
+   padding-left: 200px;
+}
+
+a{
+    color: #ffffff;
+}
