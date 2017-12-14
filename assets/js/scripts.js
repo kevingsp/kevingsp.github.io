@@ -273,10 +273,17 @@ jQuery(function ($) {
     }());
 
     // -------------------------------------------------------------
-    // Google Map
+    // Avatar Randomizer
     // -------------------------------------------------------------
 
+    var image = new Array ();
+    image[0] = "assets/images/myphoto.JPG";
+    image[1] = "assets/images/myphoto2.JPG";
 
+    var size = image.length
+    var x = Math.floor(size*Math.random())
+
+    $('#random').attr('src',image[x]);
 
 });
 
