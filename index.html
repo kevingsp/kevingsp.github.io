@@ -1,640 +1,1218 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--
+Website By Miradontsoa / MiVFX
+http://twitter.com/miradontsoa
+http://miradontsoa.com
+-->
+
+<html class="no-js" lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="A portfolio website about Kevin G. Salinas showcasing skills, work experience, and current abilities.">
-	<meta name="author" content="Kevin G. Salinas">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-	<title>Kevin G. Salinas</title>
+  <!-- Page Title Here -->
+  <title>Casely - A portfolio / onepage template</title>
 
-  <!-- Web Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<!-- Bootstrap core CSS -->
-	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<!-- Font Awesome CSS -->
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
-    <!-- Roboto Font -->
-    <link href="assets/css/roboto.css" rel="stylesheet" media="screen">
-	<!-- Animate css -->
-  <link href="assets/css/animate.css" rel="stylesheet">
-  <!-- Magnific css -->
-	<link href="assets/css/magnific-popup.css" rel="stylesheet">
-	<!-- Custom styles CSS -->
-	<link href="assets/css/style.css" rel="stylesheet" media="screen">
-  <!-- Responsive CSS -->
-  <link href="assets/css/responsive.css" rel="stylesheet">
+  <!-- Meta -->
+  <!-- Page Description Here -->
+  <meta name="description" content="A beautiful and creative portfolio template. It is mobile friend (responsive) and comes with smooth animations">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <!-- Disable screen scaling-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-  <link rel="shortcut icon" href="assets/images/ico/favicon.png">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="assets/images/ico/apple-touch-icon-57-precomposed.png">
+  <!-- Twitter Meta -->
+  <meta name="twitter:site" content="@miradontsoa">
+  <meta name="twitter:creator" content="@miradontsoa">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Page Title">
+  <meta name="twitter:description" content="Description of the page">
+  <meta name="twitter:image" content="/img/bg-default.jpg">
 
+  <!-- Facebook Meta -->
+  <meta property="og:url" content="your website url here">
+  <meta property="og:title" content="Page Title">
+  <meta property="og:description" content="Description of the page">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/img/bg-default.jpg">
+  <meta property="og:image:secure_url" content="/img/bg-default.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+  <!-- Web fonts and Web Icons -->
+  <link rel="stylesheet" href="./fonts/opensans/stylesheet.css">
+  <link rel="stylesheet" href="./fonts/bebas/stylesheet.css">
+  <link rel="stylesheet" href="./fonts/ionicons.min.css">
+  <link rel="stylesheet" href="./fonts/font-awesome.min.css">
+
+  <!-- Vendor CSS style -->
+  <link rel="stylesheet" href="./css/pageloader.css">
+
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./js/vendor/swiper.min.css">
+  <link rel="stylesheet" href="./js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="./js/vegas/vegas.min.css">
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="./css/style-default.css">
+
+  <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
 
-<body></body>
-	<!-- Preloader -->
-	<div id="tt-preloader">
-		<div id="pre-status">
-			<div class="preload-placeholder"></div>
-		</div>
-	</div>
+<body id="menu" class="body-page">
+  <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-	<!-- Home Section -->
-	<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
-		<div class="intro">
-			<div class="intro-sub"></div>
-			<h1>Kevin G. <span>Salinas</span></h1>
-			<p>Letting creativity &amp; simplicity dictate your projects.</p>
-			<!--  <div class="social-icons">
-        <ul class="list-inline">
-          <li><a href="https://facebook.com/kevingsalinas"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="http://linkedin.com/in/kevingsp"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+  <!-- Page Loader : just comment these lines to remove it -->
+  <div class="page-loader" id="page-loader">
+    <div>
+      <div class="icon ion-spin"></div>
+      <p>loading</p>
+    </div>
+  </div>
+
+  <!-- BEGIN OF site header Menu -->
+  <header class="page-header navbar page-header-alpha scrolled-white menu-right topmenu-right">
+
+    <!-- Begin of menu icon toggler -->
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+      <!-- Available class : menu-icon-dot / menu-icon-thick /menu-icon-random -->
+      <span class="menu-icon menu-icon-normal">
+        <span class="bars">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+          <span class="bar3"></span>
+        </span>
+      </span>
+    </button>
+    <!-- End of menu icon toggler -->
+
+    <!-- Begin of logo/brand -->
+    <a class="navbar-brand" href="./#">
+      <span class="logo">
+        <img class="light-logo" src="img/logo.png" alt="Logo">
+      </span>
+      <span class="text">
+        <span class="line">Casely</span>
+        <span class="line sub">Portfolio Template</span>
+      </span>
+    </a>
+    <!-- End of logo/brand -->
+
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
+      <!-- Begin of top menu -->
+      <nav class="navbar-topmenu">
+        <!-- Begin of CTA Actions, & Icons menu -->
+        <!-- <ul class="navbar-nav navbar-nav-actions">
+				<li class="nav-item">
+					<a class="btn btn-outline-white btn-round" target="_blank" href="https://themeforest.net/user/mivfx/portfolio">
+						Buy Now
+					</a>
+				</li>
+			</ul> -->
+        <!-- End of CTA & Icons menu -->
+      </nav>
+      <!-- End of top menu -->
+
+      <!-- Begin of hamburger mainmenu menu -->
+      <nav class="navbar-mainmenu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html#home">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./item.html">Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./demo.html">Demo</a>
+          </li>
         </ul>
-      </div> -->
-      <!-- social-icons -->
+      </nav>
+      <!-- End of hamburger mainmenu menu -->
 
-		</div>
+    </div>
+    <!-- end of menu wrapper -->
 
-		<div class="mouse-icon">
-			<div class="wheel"></div>
-		</div>
-	</section><!-- End Home Section -->
+  </header>
+  <!-- END OF site header Menu-->
 
-<defs>
-<style type="text/css">
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-</style>
-</defs>
-	<!-- Navigation -->	<!-- End Navigation -->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover" id="parallax-cover">
+    <!-- Cover Background -->
+    <div data-depth="0.2" class="cover-bg bg-img" data-image-src="img/bg-default.jpg"></div>
+
+    <!-- Transluscent mask as filter -->
+    <div class="cover-bg-mask bg-color" data-bgcolor="rgba(2, 3, 10, 0.7)"></div>
 
 
-       <!-- About Section -->
-    <section id="about" class="about-section section-padding">
-      <div class="container">
-<h2 class="section-title wow fadeInUp">About Me</h2>
+  </div>
+  <!--END OF page cover -->
 
-        <div class="row">
+  <!-- BEGIN OF page main content -->
+  <main class="page-main page-fullpage main-anim" id="mainpage">
 
-          <div class="col-md-4 col-md-push-8">
-            <div class="biography">
-              <div class="myphoto">
-                <img id="random" alt="">
+    <!-- Begin of home section -->
+    <div class="section section-home fullscreen-md fp-auto-height-responsive main-home section-centered"
+    data-section="home">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth with-margin v-center">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12 col-lg-6 text-left">
+              <!-- title and description -->
+              <div class="title-desc">
+                <h1 class="display-4 display-title home-title decor anim-1">Casely Brand</h1>
+                <h4 class="anim-2">Hello, we build things</h4>
+                <p class="anim-2">This is a Bootstrap 4 based template, helping you to build modern
+                  and beautiful websites</p>
               </div>
-              <ul>
-                <li><strong>Name:</strong> Kevin G. Salinas</li>
-                <li><strong>Date of birth:</strong> Feb 11</li>
-               <!-- <li><strong>Address:</strong> 3001 84th Street, 1st Floor, East Elmhurst, NY 11370</li> -->
-                <li><strong>Nationality:</strong> Hispanic-American</li>
-                <li><strong>Phone:</strong> 646 812 4992</li>
-                <li><strong>Email:</strong> kevingsp@gmail.com</li>
-              </ul>
-            </div>
-          </div> <!-- col-md-4 -->
 
-          <div class="col-md-8 col-md-pull-4">
-            <div class="short-info wow fadeInUp">
-              <h3>Objective</h3>
-              <p>It is my goal to provide exceptional customer service and give clients a one-of-a-kind experience that is both personal and insightful. I have learned to intertwine both technology and customer service, 
-                which has led me to give outstanding help desk and IT work. 
-                I strive to learn how to create a User Interface and User Experience that is modern, streamline, and functional. Knowing what a customer wants and expects will help me achieve that.</p>
+              <!-- Action button -->
+              <div class="btns-action anim-3">
+                <a class="btn btn-circicon btn-primary" href="#about">
+                  <span class="icon">
+                    <i class="ion ion-chevron-down"></i>
+                  </span>
+                  <span class="text">About</span>
+                </a>
+              </div>
             </div>
 
-            <div class="short-info wow fadeInUp">
-              <h3>Me</h3>
-              <p>A master of Apple and Windows hardware & software with a passion for design. I love to intergrate simple designs solutions into real-world applications to create user-friendly environments. </p>
-              <br/>
-            
-             <!-- <ul class="list-check">
-                <li>User Experience Design</li>
-                <li>Interface Design</li>
-                <li>Photo Editing</li>
-                <li>Branding Design</li>
-                <li>IT Repair & Trouble Shooting</li>
-                <li>Music Production</li>
-              </ul>
-            </div> -->
-
-            <!--<div class="my-signature">
-              <img src="assets/images/sign.png" alt="">
-            </div>-->
-
-            <div class="download-button">
-              <a class="btn btn-info btn-lg" href="mailto:kevingsp@gmail.com"><i class="fa fa-paper-plane"></i>Send me message</a>
-                
-             <!-- <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-download"></i>download my cv</a>-->
-                
-            </div>
           </div>
-
-
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
-    </section><!-- End About Section -->
-
-
-    <hr>
-
-  
-    <!-- Resume Section -->
-    <section id="experience" class="resume-section section-padding">
-        <div class="container">
-            <h2 class="section-title wow fadeInUp">Experience</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="resume-title">
-                        <h3>Education</h3>
-                    </div>
-                    <div class="resume">
-                        <ul class="timeline">
-                            <li>
-                                <div class="posted-date">
-                                    <span class="month">2014 - 2016</span>
-                                </div><!-- /posted-date -->
-
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>B.S. in Informatics</h3>
-                                           <h6>User Experience Design & Social Media Analytics</h6>
-                                            <span>University at Albany / Albany, NY</span>
-                                        </div><!-- /timeline-heading -->
-
-                                        
-                                            
-                                        <div class="timeline-body">
-                                          <p>Graduted on December 2016 as one of the firsts in the new program of Informatics. We had a choice of concentrations, focusing on Project Management, Database Warehousing, to I.T., Social Media Analytics, and User Experience Design. I focused on UX Design and Social Media, taking classes on how to improve user interaction, create attention-drawing designs, and read anaylitcal data that can better predict future user behaviors. </p>
-                                        </div><!-- /timeline-body -->
-                                       
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- /row -->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="resume-title">
-                        <h3>Work</h3>
-                    </div>
-                    <div class="resume">
-                        <ul class="timeline">
-                            
-                            <li class="timeline-inverted">
-                                <div class="posted-date">
-                                  <span class="month">January 2019 - Present</span>
-                                </div><!-- /posted-date -->
- 
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>The Station Media / The Music Playground / The Diner</h3>
-                                            <span>IT &amp; Operations Manager / New York, NY</span>
-                                        </div><!-- /timeline-heading -->
- 
-                                        <div class="timeline-body">
-                                            <p>Here we have a variety of different companies</p>
-                                        </div><!-- /timeline-body -->
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                             </li>
-                          
-
-
-							 <li class="timeline-inverted">
-                               <div class="posted-date">
-                                 <span class="month">April 2018 - Dec 2018</span>
-                               </div><!-- /posted-date -->
-
-                               <div class="timeline-panel wow fadeInUp">
-                                   <div class="timeline-content">
-                                       <div class="timeline-heading">
-                                           <h3>Enjoy Technology</h3>
-                                           <span>Field &amp; Fulfillment Expert / Holbrook, NY</span>
-                                       </div><!-- /timeline-heading -->
-
-                                       <div class="timeline-body">
-                                           <p>Enjoy is a startup company that’s changing the way products are delivered at home. We partner with different brands to provide a full setup experience, answers questions, and carry a mobile inventory with extra products so we can bring the store to the customer. I am certified in AT&T POS, Sonos Hardware & Software, Magic Leap Virtual Reality, and Google Hardware & Software. We use G-Suite and Slack to communicate, and our own in-house apps to manage inventory and deliveries. Our in-house app allows us to conduct routine audits of inventory levels to maintain accuracy, pick, pack and fulfill orders, and load inventory to our vehicles.</p>
-                                       </div><!-- /timeline-body -->
-                                   </div> <!-- /timeline-content -->
-                               </div><!-- /timeline-panel -->
-                            </li>
-							
-							
-						    <li>
-                               <div class="posted-date"><span class="month">March 2018 - May 2018</span></div><!-- /posted-date -->
-
-                               <div class="timeline-panel wow fadeInUp">
-                                 <div class="timeline-content">
-                                       <div class="timeline-heading">
-                                         <h3>APPLE</h3>
-                                         <span>Genius / New York, NY</span></div><!-- /timeline-heading -->
-
-                                       <div class="timeline-body">
-                                         <p>Also known as a Senior Technician, being a Genius at Apple means you become a resource on the floor, find ways to improve the customer experience, and properly train and develop the team–with mentorship roles set up, quarterly meetings, and metric reviews. While delivering an exceptional customer experience, I also diagnosed and troubleshot issues on the spot, provided options, explained potential solutions, all in a fast-paced, crowded environment. Juggling multiple customers was a major part of my job and was essential to my success, so much that it became second nature. I provided feedback, set up development goals for my team, prioritized customer’s needs as needed, was always able to deescalate situations, and make quick decisions in the moment.</p>
-                                       </div><!-- /timeline-body -->
-                                   </div> <!-- /timeline-content -->
-                               </div><!-- /timeline-panel -->
-                            </li>
-							
-							
-							<li class="timeline-inverted">
-                               <div class="posted-date"><span class="month">Aug 2017 - March 2018</span></div><!-- /posted-date -->
-
-                               <div class="timeline-panel wow fadeInUp">
-                                 <div class="timeline-content">
-                                   <div class="timeline-heading">
-                                         <h3>APPLE</h3>
-                                         <span>Technical Expert / New York, NY</span></div><!-- /timeline-heading -->
-
-                                       <div class="timeline-body">
-                                         <p>A master of iOS and MacOS for both hardware and software troubleshooting. I went through extensive training and shadowing where I was able to learn the hands-on repair aspect of iOS and MacOS devices. I did hands on repairs on all models of iPhones and Macs within a timely fashion. Kept track of repairs that came in, prioritized by appointment time and necessity, assessed our Genius Room environment and saw if changes needed to be made to have a fast and productive pace.</p>
-                                       </div><!-- /timeline-body -->
-                                 </div> <!-- /timeline-content -->
-                               </div><!-- /timeline-panel -->
-                            </li>
-							
-							
-                            
-                            <li>
-                                <div class="posted-date">
-                                  <span class="month">Sept 2016 - Sept 2017</span>
-                                </div><!-- /posted-date -->
-
-                                <div class="timeline-panel wow fadeInUp">
-                                  <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>Rockefeller College of Public Affairs &amp; Policy</h3>
-                                            <span>Web Master & Content Manager / Albany, NY</span>
-                                        </div><!-- /timeline-heading -->
-
-                                        <div class="timeline-body">
-                                          <p>Managed and updated website for Rockefeller College and individual departments. Used Dreamweaver and FTP software to update the websites in real time. Created templates with HTML/CSS &amp; JavaScript to align with the University’s theme. Worked on multiple projects concurrently and supported various directors with different goals and perspectives on how to increase user interaction and click-rate.</p>
-                                      </div><!-- /timeline-body -->
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                            </li>
-
-                            <li  class="timeline-inverted">
-                                <div class="posted-date">
-                                  <span class="month">May 2016 - Jan 2017</span>
-                                </div><!-- /posted-date -->
-
-                                <div class="timeline-panel wow fadeInUp">
-                                  <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>University at Albany</h3>
-                                            <span>Web Developer / Albany, NY</span>
-                                        </div><!-- /timeline-heading -->
-
-                                        <div class="timeline-body">
-                                          <p>Revamped and optimized department website for the Advisement Center. Introduced new features that made information easier to maneuver and access. Created wireframes and brought them to life using Illustrator/InDesign, Sketch, and other online wireframe tools. Used content management software OpenText/RedDot, to update multiple pages at once and create content specific webpages. Was able to manage the resources and assets of different sites and find way to optimize loading times.</p>
-                                      </div><!-- /timeline-body -->
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                            </li>
-                            
-                            
-                            <li>
-                                <div class="posted-date">
-                                  <span class="month">Oct 2015 - Aug 2017</span>
-                                </div><!-- /posted-date -->
-
-                                <div class="timeline-panel wow fadeInUp">
-                                  <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                          <h3>Apple</h3>
-                                          <span>Technical Specialist / Albany, NY</span>
-                                      </div><!-- /timeline-heading -->
-
-                                        <div class="timeline-body">
-                                            <p>iPhone and Mac technician and specialist. Provided hands-on technical support by diagnosing problems and following a systematic troubleshooting method to determine root cause of issue. Experience dealing with frustrated customers and keeping composure while working under pressure in a fast paced environment. Handled over 30 customer appointments a day and juggled multiple customers at a time.</p>
-                                        </div><!-- /timeline-body -->
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                            </li>
-                            
-                            
-                            <li  class="timeline-inverted">
-                                <div class="posted-date">
-                                  <span class="month">Aug 2012 - Aug 2015</span>
-                                </div><!-- /posted-date -->
-
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>YMCA of Greater New York</h3>
-                                            <span>Member Service Administrator / Long Island City, NY</span>
-                                        </div><!-- /timeline-heading -->
-
-                                        <div class="timeline-body">
-                                            <p>Set up online program classes to register families and kids. Fix monthly billing for memberships as well as follow ups for prospective members. Take payments from 3rd party organizations and companies to create revenue to meet monthly budgets.</p>
-                                        </div><!-- /timeline-body -->
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- /row -->
-        </div><!-- /.container -->
-    </section><!-- End Resume Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section section-padding">
-      <div class="container">
-        <h2 class="section-title wow fadeInUp">Skills</h2>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="skill-progress">
-              <div class="skill-title"><h3>User Support</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" ><span>100%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Graphic Design</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-            <div class="skill-progress">
-              <div class="skill-title"><h3>HTML/CSS</h3></div>  
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-          </div><!-- /.col-md-6 -->
-
-          <div class="col-md-6">
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Photoshop</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Project Management</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" ><span>70%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Prototyping</h3></div>  
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-          </div><!-- /.col-md-6 -->
-            
-              <div class="col-md-6">
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Wireframes</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Figma</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" ><span>85%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Javascript</h3></div>  
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-          </div><!-- /.col-md-6 -->
-            
-            <div class="col-md-6">
-            <div class="skill-progress">
-              <div class="skill-title"><h3>InDesign</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" ><span>85%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Sketch App</h3></div> 
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" ><span>85%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-            <div class="skill-progress">
-              <div class="skill-title"><h3>Git</h3></div>  
-              <div class="progress">
-                <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
-                </div>
-              </div><!-- /.progress -->
-            </div><!-- /.skill-progress -->
-          </div><!-- /.col-md-6 -->
-            
-        </div><!-- /.row -->
-
-        <div class="skill-chart text-center">
-          <h3>More skills</h3>
-        </div>
-          
-        <div class="row more-skill text-center">
-          <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="95" data-color="e74c3c">
-                    <span class="percent"></span>
-                    <div class="chart-text">
-                      <span>Leadership</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="100" data-color="2ecc71">
-                    <span class="percent"></span>
-                    <div class="chart-text">
-                      <span>Creativity</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="85" data-color="3498db">
-                    <span class="percent"></span>
-                    <div class="chart-text">
-                      <span>Content Management</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="85" data-color="3498db">
-                    <span class="percent"></span>
-                    <div class="chart-text">
-                      <span>Bootstrap</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="100" data-color="3498db">
-                    <span class="percent"></span>
-                    <div class="chart-text">
-                      <span>Teamwork</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-2">
-              <div class="chart" data-percent="100" data-color="3498db">
-                    <span class="percent"></span>
-                    <div class="chart-text">
-                      <span>Motivation</span>
-                    </div>
-                </div>
-            </div>
         </div>
 
-      </div><!-- /.container -->
-    </section><!-- End Skills Section -->
+        <div class="section-aside aside-bottom">
+          <div class="text-right">
+
+          </div>
+          <!-- Action button -->
+          <div class="btns-action anim-3 text-right">
+            <a class="btn btn-outline-white btn-round" href="#contact">
+              Contact
+            </a>
+          </div>
+        </div>
 
 
-
-
-
-    <!-- Facts Section -->
-    <section id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
-      <div class="tt-overlay-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="count-wrap">
-                <div class="col-sm-3 col-xs-6">
-                  <i class="fa fa-flask"></i>
-                  <h3 class="timer">5</h3>
-                  <p>Years of Experience</p>
-                </div>
-                <div class="col-sm-3 col-xs-6"> 
-                  <i class="fa fa-thumbs-up"></i>
-                  <h3 class="timer">41</h3>                
-                  <p>Projects Done</p>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                  <i class="fa fa-users"></i>
-                  <h3 class="timer">12</h3> 
-                  <p>Happy Clients</p>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                  <i class="fa fa-trophy"></i>
-                  <h3 class="timer">2</h3> 
-                  <p>Awards Won</p>
-                </div>
-              </div><!-- /count-wrap -->
-            </div><!-- /.col-md-12 -->
-          </div><!-- /.row -->
-        </div><!-- /.container -->
+        <!-- Arrows scroll down/up -->
+        <footer class="section-footer scrolldown">
+          <a class="down">
+            <span class="icon"></span>
+            <span class="txt">Scroll Down</span>
+          </a>
+        </footer>
       </div>
-    </section> <!-- End Facts Section -->
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of home section -->
 
+    <!-- Begin of description section -->
+    <div class="section section-description fp-auto-height-responsive " data-section="about">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth with-margin">
 
-    
-
-
-    <!-- Hire Section -->
-    <section id="resume" class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
-      <div class="hire-section-bg">
-        <div class="container">
+        <!-- content -->
+        <div class="section-content anim">
           <div class="row">
-            <div class="col-md-12">
-              <h2>I'm available for freelance projects!</h2>
-              <a href="/assets/resume.pdf" target="_blank" class="btn btn-default">Download my Resume</a><br><br><br>
-             			 <a href="https://www.figma.com/proto/dG733Mbma6Qgva5PHhkf5YC4/deck?node-id=3%3A2&scaling=min-zoom&redirected=1" target="_blank" class="btn btn-default"> &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp; Latest Design &nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;  </a>
-			  <br><br><br>
-              <a href="/assets/portfolio.pdf" target="_blank" class="btn btn-default">  &nbsp;&nbsp;&nbsp; View my projects &nbsp;&nbsp;&nbsp;   </a>
-            </div><!-- /.col-md-12 -->
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-      </div><!-- /.hire-section-bg -->
-    </section><!-- End Hire Section -->
+            <div class="col-12 col-md-6 text-left">
+              <!-- title and description -->
+              <div class="title-desc">
+                <h1 class="display-4 display-title anim-1">About</h1>
+                <h4 class="anim-2">We build things</h4>
+                <p class="anim-2">This describes what we do and what is our mission. At right you can
+                  see the awesome people behind. Lorem ipsum magicum dolor sit amet,
+                  consectetur adipiscing elit. Maecenas a sem ultrices neque vehicula
+                  fermentum a sit amet nulla.
+                </p>
+              </div>
+
+              <!-- Action button -->
+              <div class="btns-action anim-3">
+                <a class="btn btn-circicon btn-primary" href="#projects-featured">
+                  <span class="icon">
+                    <i class="ion ion-chevron-down"></i>
+                  </span>
+                  <span class="text">Selected Works</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- aside -->
+        <div class="section-aside aside-bottom anim small-relative">
+          <div class="a-wrapper anim-4">
+            <!-- begin of slider carousel-swiper-alpha -->
+            <div class="slider-wrapper carousel-swiper-alpha carousel-swiper-alpha-demo">
+              <!-- slider -->
+              <div class="slider-container swiper-container">
+                <ul class="item-list swiper-wrapper">
+                  <!-- item -->
+                  <li class="slide-item swiper-slide">
+                    <div class="item-wrapper">
+                      <div class="illustr">
+                        <img src="img/items/img-people1.jpg" alt="Image" class="img">
+                      </div>
+                      <div class="legend">
+                        <h3 class="title">Geraldine Cyclone</h3>
+                        <h4>Senior Designer</h4>
+                        <div class="icons">
+                          <a class="icon-btn" href="#">
+                            <i class="icon fa fa-instagram"></i>
+                          </a>
+                          <a class="icon-btn" href="#">
+                            <i class="icon fa fa-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="slide-item swiper-slide">
+                    <div class="item-wrapper">
+                      <div class="illustr">
+                        <img src="img/items/img-people2.jpg" alt="Image" class="img">
+                      </div>
+                      <div class="legend">
+                        <h3 class="title">Jerome Levier</h3>
+                        <h4>Developer</h4>
+                        <div class="icons">
+                          <a class="icon-btn" href="#">
+                            <i class="icon fa fa-instagram"></i>
+                          </a>
+                          <a class="icon-btn" href="#">
+                            <i class="icon fa fa-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="slide-item swiper-slide">
+                    <div class="item-wrapper">
+                      <div class="illustr">
+                        <img src="img/items/img-people3.jpg" alt="Image" class="img">
+                      </div>
+                      <div class="legend">
+                        <h3 class="title">Nicole Florence</h3>
+                        <h4>Architect</h4>
+                        <div class="icons">
+                          <a class="icon-btn" href="#">
+                            <i class="icon fa fa-instagram"></i>
+                          </a>
+                          <a class="icon-btn" href="#">
+                            <i class="icon fa fa-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="slide-item swiper-slide">
+                    <div class="item-wrapper">
+                      <div class="illustr">
+                        <img src="img/items//img-people4.jpg" alt="Image" class="img">
+                      </div>
+                      <div class="legend">
+                        <h3 class="title">Tintin Dupon</h3>
+                        <h4>Photograph</h4>
+                        <div class="icons">
+                          <a class="icon-btn" href="#">
+                            <i class="icon fa fa-instagram"></i>
+                          </a>
+                          <a class="icon-btn" href="#">
+                            <i class="icon fa fa-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- pagination -->
+              <div class="items-pagination bar"></div>
+
+            </div>
+            <!-- end of slider carousel-swiper-alpha -->
+
+          </div>
+        </div>
 
 
+        <!-- Arrows scroll down/up -->
+        <footer class="section-footer scrolldown">
+          <a class="down">
+            <span class="icon"></span>
+            <span class="txt">Works</span>
+          </a>
+        </footer>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
 
-
-
-
-	<!-- Footer Section -->
-    <footer class="footer-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="copyright text-center">
-              <p>&copy; Kevin Salinas 2018. All rights reserved.</p>
+    <!-- Begin of slider section -->
+    <div class="section section-twoside project-slider fp-auto-height-responsive " data-section="projects-featured">
+      <div class="slide">
+        <div class="slide-wrapper">
+          <div class="item-wrapper">
+            <div class="illustr">
+              <img class="img img-block" src="img/items/img-sample1.jpg" alt="Image">
+            </div>
+            <div class="legend">
+              <a href="item.html#project_url">
+                <h3>Paper Design</h3>
+                <h4>Art / Print</h4>
+                <p>Lorem ipsum magicum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas a sem ultrices neque vehicula fermentum a sit amet nulla.</p>
+              </a>
+              <a class="btn btn-transp-arrow btn-primary" href="item.html#project_url">
+                <span class="text">Details</span>
+                <span class="icon arrow-right"></span>
+              </a>
+              <div class="icons">
+                <a class="icon-btn" href="#">
+                  <i class="icon fa fa-instagram"></i>
+                </a>
+                <a class="icon-btn" href="#">
+                  <i class="icon fa fa-twitter"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer><!-- End Footer Section -->
+
+      <div class="slide">
+        <div class="slide-wrapper">
+          <div class="item-wrapper">
+            <div class="illustr">
+              <img class="img img-block" src="img/items/img-sample2.jpg" alt="Image">
+            </div>
+            <div class="legend">
+              <a href="item.html#project_url">
+                <h3>Fire Cloud</h3>
+                <h4>Photography / App</h4>
+                <p>Lorem ipsum magicum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas a sem ultrices neque vehicula fermentum a sit amet nulla.</p>
+              </a>
+              <a class="btn btn-transp-arrow btn-primary" href="item.html#project_url">
+                <span class="text">Details</span>
+                <span class="icon arrow-right"></span>
+              </a>
+              <div class="icons">
+                <a class="icon-btn" href="#">
+                  <i class="icon fa fa-instagram"></i>
+                </a>
+                <a class="icon-btn" href="#">
+                  <i class="icon fa fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-wrapper">
+          <div class="item-wrapper">
+            <div class="illustr">
+              <img class="img img-block" src="img/items/img-sample4.jpg" alt="Image">
+            </div>
+            <div class="legend">
+              <a href="item.html#project_url">
+                <h3>Summer Scape</h3>
+                <h4>Photography</h4>
+                <p>Lorem ipsum magicum dolor sit amet, consectetur adipiscing elit.
+                  Maecenas a sem ultrices neque vehicula fermentum a sit amet nulla.</p>
+              </a>
+              <a class="btn btn-transp-arrow btn-primary" href="item.html#project_url">
+                <span class="text">Details</span>
+                <span class="icon arrow-right"></span>
+              </a>
+              <div class="icons">
+                <a class="icon-btn" href="#">
+                  <i class="icon fa fa-instagram"></i>
+                </a>
+                <a class="icon-btn" href="#">
+                  <i class="icon fa fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-	<!-- Scroll-up -->
-	<div class="scroll-up">
-		<a href="#home"><i class="fa fa-angle-up"></i></a>
-	</div>
+      <!-- Arrows scroll down/up -->
+      <footer class="section-footer scrolldown">
+        <a class="down">
+          <span class="icon"></span>
+          <span class="txt">All Works</span>
+        </a>
+      </footer>
 
-	<!-- Javascript files -->
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.stellar.min.js"></script>
-	<script src="assets/js/jquery.sticky.js"></script>
-  <script src="assets/js/smoothscroll.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/jquery.countTo.js"></script>
-  <script src="assets/js/jquery.inview.min.js"></script> 
-  <script src="assets/js/jquery.easypiechart.js"></script>
-  <script src="assets/js/jquery.shuffle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <!--<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script> -->
-  <script src="assets/js/jquery.fitvids.js"></script>
+    </div>
+    <!-- End of slider section -->
 
-  <script src="assets/js/scripts.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Begin of list projects section -->
+    <div class="section section-list-feature fp-auto-height-responsive " data-section="projects">
 
-  ga('create', 'UA-71042701-1', 'auto');
-  ga('send', 'pageview');
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12 col-lg-6 text-left">
+              <!-- title and description -->
+              <div class="title-desc">
+                <h2 class="display-4 display-title anim-1">Projects</h2>
+                <p class="anim-2">List of our projects. Lorem ipsum magicum dolor sit amet, consectetur
+                  adipiscing elit. Maecenas a sem ultrices neque vehicula fermentum
+                  a sit amet nulla.
+                </p>
+              </div>
+            </div>
+          </div>
 
-</script>
+          <!-- project list -->
+          <div class="project-list grid-1 grid-md-2 grid-lg-3 anim-list">
+            <!-- an item -->
+            <div class="item media media-project">
+              <div class="media-img">
+                <img class="" src="img/items/img-sample9-square.jpg" alt="An image">
+              </div>
+              <div class="media-body">
+                <a href="item.html#project_url">
+                  <h4>E-learning</h4>
+                  <h3>Coding Course</h3>
+                  <p class="price">$12</p>
+                </a>
+              </div>
+              <div class="media-footer">
+                <a class="btn btn-transp-arrow btn-primary" href="item.html">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media media-project">
+              <div class="media-img">
+                <img class="" src="img/items/img-sample10-square.jpg" alt="An image">
+              </div>
+              <div class="media-body">
+                <a href="item.html#project_url">
+                  <h4>E-learning</h4>
+                  <h3>Coding Course</h3>
+                  <p class="price">$12</p>
+                </a>
+              </div>
+              <div class="media-footer">
+                <a class="btn btn-transp-arrow btn-primary" href="item.html">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media media-project">
+              <div class="media-img">
+                <img class="" src="img/items/img-sample11-square.jpg" alt="An image">
+              </div>
+              <div class="media-body">
+                <a href="item.html#project_url">
+                  <h4>E-learning</h4>
+                  <h3>Coding Course</h3>
+                  <p class="price">$12</p>
+                </a>
+              </div>
+              <div class="media-footer">
+                <a class="btn btn-transp-arrow btn-primary" href="item.html">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media media-project">
+              <div class="media-img">
+                <img class="" src="img/items/img-sample12-square.jpg" alt="An image">
+              </div>
+              <div class="media-body">
+                <a href="item.html#project_url">
+                  <h4>E-learning</h4>
+                  <h3>Coding Course</h3>
+                  <p class="price">$12</p>
+                </a>
+              </div>
+              <div class="media-footer">
+                <a class="btn btn-transp-arrow btn-primary" href="item.html">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media media-project">
+              <div class="media-img">
+                <img class="" src="img/items/img-sample13-square.jpg" alt="An image">
+              </div>
+              <div class="media-body">
+                <a href="item.html#project_url">
+                  <h4>E-learning</h4>
+                  <h3>Coding Course</h3>
+                  <p class="price">$12</p>
+                </a>
+              </div>
+              <div class="media-footer">
+                <a class="btn btn-transp-arrow btn-primary" href="item.html">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media media-project">
+              <div class="media-img">
+                <img class="" src="img/items/img-sample14-square.jpg" alt="An image">
+              </div>
+              <div class="media-body">
+                <a href="item.html#project_url">
+                  <h4>E-learning</h4>
+                  <h3>Coding Course</h3>
+                  <p class="price">$12</p>
+                </a>
+              </div>
+              <div class="media-footer">
+                <a class="btn btn-transp-arrow btn-primary" href="item.html">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          </div>
 
-  ga('create', 'UA-71035004-1', 'auto');
-  ga('send', 'pageview');
+        </div>
 
-</script>
+
+
+
+        <!-- Arrows scroll down/up -->
+        <footer class="section-footer scrolldown">
+          <a class="down">
+            <span class="icon"></span>
+            <span class="txt">Services</span>
+          </a>
+        </footer>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of list projects section -->
+
+    <!-- Begin of list feature section -->
+    <div class="section section-list-feature fp-auto-height-responsive " data-section="services">
+      <!-- section cover -->
+      <div class="section-cover-full bg-img" data-image-src="./img/sections/services.png">
+      </div>
+
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12 col-lg-6 text-left">
+              <!-- title and description -->
+              <div class="title-desc">
+                <h2 class="display-4 display-title anim-1">Services</h2>
+                <p class="anim-2">List of our services. Lorem ipsum magicum dolor sit amet, consectetur
+                  adipiscing elit. Maecenas a sem ultrices neque vehicula fermentum
+                  a sit amet nulla.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- service list -->
+          <div class="service-list grid-1 grid-md-2 grid-lg-4 anim-list decor">
+            <!-- an item -->
+            <div class="item media">
+              <div class="img">
+                <i class="icon ion-code-working"></i>
+              </div>
+              <div class="media-body">
+                <h4>Coding</h4>
+                <p>An awesome service that we offer to you. This is just a placeholder
+                  text.</p>
+
+                <a class="btn btn-transp-arrow btn-primary" href="">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media">
+              <div class="img">
+                <i class="icon ion-ios-cog-outline"></i>
+              </div>
+              <div class="media-body">
+                <h4>Mechanics</h4>
+                <p>An awesome service that we offer to you. This is just a placeholder
+                  text.</p>
+
+
+                <a class="btn btn-transp-arrow btn-primary" href="">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media">
+              <div class="img">
+                <i class="icon ion-ios-analytics-outline"></i>
+              </div>
+              <div class="media-body">
+                <h4>Analytics</h4>
+                <p>An awesome service that we offer to you. This is just a placeholder
+                  text.</p>
+
+                <a class="btn btn-transp-arrow btn-primary" href="">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media">
+              <div class="img">
+                <i class="icon ion-ios-grid-view-outline"></i>
+              </div>
+              <div class="media-body">
+                <h4>Design</h4>
+                <p>An awesome service that we offer to you. This is just a placeholder
+                  text.</p>
+
+                <a class="btn btn-transp-arrow btn-primary" href="">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media">
+              <div class="img">
+                <i class="icon ion-ios-albums-outline"></i>
+              </div>
+              <div class="media-body">
+                <h4>Painting</h4>
+                <p>An awesome service that we offer to you. This is just a placeholder
+                  text.</p>
+
+                <a class="btn btn-transp-arrow btn-primary" href="">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media">
+              <div class="img">
+                <i class="icon ion-ios-camera-outline"></i>
+              </div>
+              <div class="media-body">
+                <h4>Photogramhy</h4>
+                <p>An awesome service that we offer to you. This is just a placeholder
+                  text.</p>
+
+                <a class="btn btn-transp-arrow btn-primary" href="">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media">
+              <div class="img">
+                <i class="icon ion-ios-cloud-outline"></i>
+              </div>
+              <div class="media-body">
+                <h4>Hosting</h4>
+                <p>An awesome service that we offer to you. This is just a placeholder
+                  text.</p>
+
+                <a class="btn btn-transp-arrow btn-primary" href="">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- an item -->
+            <div class="item media">
+              <div class="img">
+                <i class="icon ion-ios-game-controller-a-outline"></i>
+              </div>
+              <div class="media-body">
+                <h4>Entertainment</h4>
+                <p>An awesome service that we offer to you. This is just a placeholder
+                  text.</p>
+
+                <a class="btn btn-transp-arrow btn-primary" href="">
+                  <span class="text">Details</span>
+                  <span class="icon arrow-right"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+        <!-- Arrows scroll down/up -->
+        <footer class="section-footer scrolldown">
+          <a class="down">
+            <span class="icon"></span>
+            <span class="txt">Projects</span>
+          </a>
+        </footer>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of list feature section -->
+
+
+    <!-- Begin of list products section -->
+    <div class="section section-grid fp-auto-height-responsive " data-section="products">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth with-margin">
+
+
+        <div class="section-content mb-3">
+          <div class="row">
+            <div class="col-12 col-lg-6 text-left">
+              <!-- title and description -->
+              <div class="title-desc">
+                <h2 class="display-4 display-title anim-1">Products</h2>
+                <p class="anim-2">List of products. Lorem ipsum magicum dolor sit amet, consectetur
+                  adipiscing elit. Maecenas a sem ultrices neque vehicula fermentum
+                  a sit amet nulla.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Begin of item list -->
+        <div class="section-content row justify-content-between">
+          <!-- item  -->
+          <div class="col-12 col-sm-6 col-lg-4 center-vh">
+            <div class="section-content anim translateUp">
+              <div class="images text-center">
+                <div class="img-frame-normal">
+                  <div class="img-1 shadow">
+                    <a href="item.html#project_url">
+                      <img class="img" src="img/items/img-sample5.jpg" alt="Image">
+                    </a>
+                    <span class="price bottom">
+                      $39.99
+                    </span>
+                  </div>
+                  <div class="legend text-center decor">
+                    <h3 class="decor">
+                      <strong>Fish Game</strong>
+                    </h3>
+                    <p>This is just a placeholder text.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item  -->
+          <div class="col-12 col-sm-6 col-lg-4 center-vh">
+            <div class="section-content anim">
+              <div class="images text-center">
+                <div class="img-frame-normal">
+                  <div class="img-1 shadow">
+                    <a href="item.html#project_url">
+                      <img class="img" src="img/items/img-sample6.jpg" alt="Image">
+                    </a>
+                    <span class="price bottom">
+                      $39.99
+                    </span>
+                  </div>
+                  <div class="legend text-center decor">
+                    <h3 class="display-normal">
+                      <strong>Bird App</strong>
+                    </h3>
+                    <p>This is just a placeholder text.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item  -->
+          <div class="col-12 col-sm-6 col-lg-4 center-vh">
+            <div class="section-content anim translateDown">
+              <div class="images text-center">
+                <div class="img-frame-normal">
+                  <div class="img-1 shadow">
+                    <a href="item.html#project_url">
+                      <img class="img" src="img/items/img-sample7.jpg" alt="Image">
+                    </a>
+                    <span class="price bottom">
+                      $39.99
+                    </span>
+                  </div>
+                  <div class="legend text-center decor">
+                    <h3 class="display-normal">
+                      <strong>Photo App</strong>
+                    </h3>
+                    <p>This is just a placeholder text.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item  -->
+          <div class="col-12 col-sm-6 col-lg-4 center-vh">
+            <div class="section-content anim translateUp">
+              <div class="images text-center">
+                <div class="img-frame-normal">
+                  <div class="img-1 shadow">
+                    <a href="item.html#project_url">
+                      <img class="img" src="img/items/img-sample8.jpg" alt="Image">
+                    </a>
+                    <span class="price bottom">
+                      $39.99
+                    </span>
+                  </div>
+                  <div class="legend text-center decor">
+                    <h3 class="display-normal">
+                      <strong>Painting</strong>
+                    </h3>
+                    <p>This is just a placeholder text.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item  -->
+          <div class="col-12 col-sm-6 col-lg-4 center-vh">
+            <div class="section-content anim">
+              <div class="images text-center">
+                <div class="img-frame-normal">
+                  <div class="img-1 shadow">
+                    <a href="item.html#project_url">
+                      <img class="img" src="img/items/img-sample9.jpg" alt="Image">
+                    </a>
+                    <span class="price bottom">
+                      $39.99
+                    </span>
+                  </div>
+                  <div class="legend text-center decor">
+                    <h3 class="display-normal">
+                      <strong>Software</strong>
+                    </h3>
+                    <p>This is just a placeholder text.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item  -->
+          <div class="col-12 col-sm-6 col-lg-4 center-vh">
+            <div class="section-content anim translateDown">
+              <div class="images text-center">
+                <div class="img-frame-normal">
+                  <div class="img-1 shadow">
+                    <a href="item.html#project_url">
+                      <img class="img" src="img/items/img-sample10.jpg" alt="Image">
+                    </a>
+                    <span class="price bottom">
+                      $39.99
+                    </span>
+                  </div>
+                  <div class="legend text-center decor">
+                    <h3 class="display-normal">
+                      <strong>Home Decoration</strong>
+                    </h3>
+                    <p>This is just a placeholder text.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of item list -->
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of list products section -->
+
+
+
+
+    <!-- Begin of register/login/signin section -->
+    <div class="section section-register fp-auto-height-responsive " data-section="register">
+      <!-- section cover -->
+      <div class="section-cover-full bg-img" data-image-src="./img/sections/register.png">
+      </div>
+
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth with-margin">
+
+        <!-- content -->
+        <div class="section-content anim">
+
+          <div class="row">
+
+            <div class="col-12 col-md-12 col-lg-5">
+              <!-- Registration form container-->
+              <form class="send_email_form form-container form-container-transparent form-container-white"
+              method="post" action="ajaxserver/serverfile.php">
+                <div class="form-desc">
+                  <h2 class="display-4 display-title  anim-2">Subscribe</h2>
+                  <p class="invite  anim-3">Don't miss any new opportunity, Hurry up! register now :</p>
+                </div>
+                <div class="form-input  anim-4">
+                  <div class="form-group form-success-gone">
+                    <label for="reg-email">Email</label>
+                    <input id="reg-email" name="email" class="form-control-line form-control-white" type="email"
+                    required placeholder="your@email.address" data-validation-type="email"
+                    />
+                  </div>
+                  <div class="form-group mb-0">
+                    <div>
+                      <p class="email-ok invisible form-text-feedback form-success-visible">Your email has been registred, thank you.</p>
+                    </div>
+
+                    <div class="btns-action anim-3">
+                      <button id="submit-email" name="submit_email" class="btn btn-circicon btn-primary form-success-gone">
+                        <span class="icon">
+                          <i class="ion ion-checkmark"></i>
+                        </span>
+                        <span class="text">Subscribe</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- end of content -->
+
+        <!-- aside footer -->
+        <div class="section-aside aside-bottom small-relative">
+          <div class="text-left text-md-right">
+            <p>Stay updated. Follow us on social media</p>
+          </div>
+          <div class="icons icons-margin">
+            <a class="icon-btn" href="#">
+              <i class="icon fa fa-instagram"></i>
+            </a>
+            <a class="icon-btn" href="#">
+              <i class="icon fa fa-youtube"></i>
+            </a>
+            <a class="icon-btn" href="#">
+              <i class="icon fa fa-facebook"></i>
+            </a>
+            <a class="icon-btn" href="#">
+              <i class="icon fa fa-pinterest"></i>
+            </a>
+            <a class="icon-btn" href="#">
+              <i class="icon fa fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <!-- End of section wrapper -->
+
+      <!-- Arrows scroll down/up -->
+      <footer class="section-footer scrolldown">
+        <a class="down">
+          <span class="icon"></span>
+          <span class="txt">Contact</span>
+        </a>
+      </footer>
+    </div>
+    <!-- End of register/login/signin section -->
+
+    <!-- Begin of contact section -->
+    <div class="section section-contact fp-auto-height-responsive no-slide-arrows " data-section="contact">
+      <!-- section cover -->
+      <div class="section-cover-full bg-img" data-image-src="./img/sections/contact.png">
+      </div>
+
+      <!-- Begin of slide section wrapper -->
+      <div class="section-wrapper fullwidth  with-margin">
+        <!-- main content -->
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-6">
+            <!-- content -->
+            <div class="section-content anim text-left">
+              <!-- title and description -->
+              <div class="title-desc">
+                <div class="anim-2">
+                  <h2 class="display-4 display-title">Contact</h2>
+                  <p>For questions about our company and products found on our stores.
+                    Cras vitae neque molestie, rhoncus ipsum sit amet, lobortis dui.
+                    Fusce in urna sem.</p>
+                </div>
+                <div class="address-container anim-3">
+
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                      <h4>Contact</h4>
+                      <p>Call: 01 234 567 89</p>
+                      <p>Email: ouremail@domain.com</p>
+
+                      <div class="icons icons-margin">
+                        <a class="icon-btn" href="#">
+                          <i class="icon fa fa-instagram"></i>
+                        </a>
+                        <a class="icon-btn" href="#">
+                          <i class="icon fa fa-twitter"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                      <h4>Address</h4>
+                      <p>
+                        Company address
+                        <br>12 Street Turning Place
+                        <br>South Est, Antartica
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+
+          </div>
+        </div>
+
+
+        <!-- aside content -->
+        <div class="section-aside aside-bottom anim small-relative">
+          <div class="message-form">
+            <h4>Write message</h4>
+            <div class="form-container form-container-card">
+              <!-- Message form container -->
+              <form class="send_message_form message form" method="post" action="ajaxserver/serverfile.php"
+              id="message_form">
+                <div class="form-group name">
+                  <input id="mes-name" name="name" type="text" placeholder="Name" class="form-control form-control-outline thick form-success-clean"
+                  required>
+                </div>
+                <div class="form-group email">
+                  <input id="mes-email" type="email" placeholder="Email" name="email" class="form-control form-control-outline thick form-success-clean"
+                  required>
+                </div>
+                <div class="form-group no-border">
+                  <textarea id="mes-text" placeholder="Message ..." name="message" class="form-control form-control-outline thick form-success-clean"
+                  required></textarea>
+
+                  <div>
+                    <p class="message-ok invisible form-text-feedback form-success-visible">Your message has been sent, thank you.</p>
+                  </div>
+                </div>
+
+                <div class="btns text-right">
+                  <button id="submit-message" class="btn btn-outline-white btn-round btn-fullNot email_b"
+                  name="submit_message">
+                    <span class="txt">Send Now</span>
+                    <span class="arrow-icon"></span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of slide section wrapper -->
+
+    </div>
+    <!-- End of contact section -->
+  </main>
+  <!-- END OF page main content -->
+
+  <!-- BEGIN OF page footer -->
+  <footer id="site-footer" class="page-footer">
+
+    <!-- Right content -->
+    <div class="footer-right">
+      <p class="note">Casely by
+        <a href="http://highhay.com">
+          <span class="marked">Miradontsoa</span>
+        </a>
+      </p>
+      <ul class="social">
+        <li>
+          <a href="//facebook.com/miradontsoa">
+            <i class="icon fa fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="//twitter/miradontsoa">
+            <i class="icon fa fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="//instagram.com/miradontsoa">
+            <i class="icon fa fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- END OF site footer -->
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <script src="./js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="./js/slick/slick.min.js"></script>
+
+  <!-- All vendor scripts -->
+  <script src="./js/vendor/parallax.min.js"></script>
+  <script src="./js/vendor/scrolloverflow.min.js"></script>
+  <script src="./js/vendor/all.js"></script>
+  <script src="./js/particlejs/particles.min.js"></script>
+
+  <!-- Countdown script -->
+  <script src="./js/jquery.downCount.js"></script>
+
+  <!-- Form script -->
+  <script src="./js/form_script.js"></script>
+
+  <!-- Javascript main files -->
+  <script src="./js/main.js"></script>
+
+
 </body>
+
 </html>
