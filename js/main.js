@@ -224,7 +224,7 @@ $(document).on('ready', function () {
 				navigation: true,
 				responsiveWidth: 1024,
 				responsiveHeight: 480,
-				scrollOverflow: false,
+				scrollOverflow: true,
 				// scrollOverflow: scrollOverflow,
 				scrollOverflowOptions: {
 					// scrollbars: false,
