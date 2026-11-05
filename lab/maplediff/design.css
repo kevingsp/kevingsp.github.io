@@ -1,0 +1,67 @@
+/* MapleDiff polish using Unslop by Damir Sokolovsky (@heydamir), CC BY 4.0.
+   https://github.com/heydamir/unslop — existing product palette retained. */
+/* 1. Spacing: one 4px rhythm across navigation, forms, archive and viewer. */
+.maplediff-app .header-inner{height:64px;gap:32px}
+.maplediff-app .breadcrumb{margin:24px 0;gap:12px}
+.maplediff-app .panel-top{padding:16px 24px}
+.maplediff-app .import-panel form{padding:20px 24px 16px}
+.maplediff-app .url-row{gap:12px}
+.maplediff-app #message{padding-inline:24px}
+.maplediff-app #message:not(:empty){padding-bottom:20px}
+.maplediff-app .registry-panel{margin:32px 0 40px}
+.maplediff-app .registry-panel summary{margin-bottom:16px}
+.maplediff-app .registry-grid{gap:16px}
+.maplediff-app .registry-card{padding:20px;gap:8px}
+.maplediff-app .entry-heading{margin:32px 0 24px;gap:24px}
+.maplediff-app .revision-picker{padding:20px 24px;gap:24px}
+.maplediff-app .results-heading{margin:32px 0 16px}
+.maplediff-app .toolbar{gap:16px;margin-bottom:16px}
+.maplediff-app .legend{gap:24px;margin:16px 0 48px}
+.maplediff-app footer{padding:24px 0 32px}
+/* 2. Color: three readable inks; accent reserved for the action and selection. */
+.maplediff-app{--text:#24292f;--muted:#656d76;--border:#d8dee4;--orange:#b84d24;--secondary:#525a63}
+.maplediff-app .intro p{color:var(--secondary)}
+.maplediff-app .pill{border:0;padding:0;color:var(--muted);background:transparent;border-radius:0}
+.maplediff-app .registry-card[aria-current=true]{box-shadow:inset 3px 0 0 var(--orange);border-color:var(--border)}
+.maplediff-app .registry-card:hover{background:#f6f8fa;border-color:#b8c1ca}
+/* 3. Icons: remove the decorative star and command glyph; text owns navigation. */
+.maplediff-app .brand{font-size:18px;font-weight:600;letter-spacing:0}
+.maplediff-app .brand span{font-size:14px}
+/* 4–5. Copy and type: product-specific nouns, sentence case, readable archive meta. */
+.maplediff-app{font-size:14px;font-variant-numeric:tabular-nums}
+.maplediff-app button{font-size:13px;font-weight:500;min-height:36px;padding:8px 12px}
+.maplediff-app label{font-size:13px;font-weight:500}
+.maplediff-app h2{font-size:15px;font-weight:500}
+.maplediff-app .product-name{font-size:14px;color:var(--orange);margin:0 0 16px;font-weight:500}
+.maplediff-app h1{font-size:40px;line-height:1.12;letter-spacing:-1px;font-weight:500;margin:0 0 20px}
+.maplediff-app h1 span{color:var(--text)}
+.maplediff-app .intro-copy>p:last-child{font-size:14px;line-height:1.8;margin:0}
+.maplediff-app .pill,.maplediff-app .hint,.maplediff-app .import-help,.maplediff-app .revision-picker p,.maplediff-app footer{font-size:12px;line-height:1.6}
+.maplediff-app .registry-panel summary{font-size:14px;font-weight:500}
+.maplediff-app .registry-card h3{font-size:14px;line-height:1.5;font-weight:500}
+.maplediff-app .registry-card span{font-size:12px}
+.maplediff-app .eyebrow{font-family:inherit;font-size:12px;letter-spacing:0;color:var(--muted)}
+.maplediff-app .entry-heading h2{font-size:24px;line-height:1.4;font-weight:500;letter-spacing:0;margin:8px 0}
+.maplediff-app .results-heading h2{font-size:20px;letter-spacing:0}
+.maplediff-app .results-heading p{font-size:12px;margin-top:8px}
+.maplediff-app #message{font-size:12px}
+/* 6. Layout: use the hero's right half for one readable product scene. */
+.maplediff-app .intro.has-demo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,600px);gap:24px;align-items:center;margin-bottom:24px}
+.maplediff-app .intro-copy{padding-bottom:24px}
+.maplediff-app .demo-side{margin:0;min-width:0}
+.maplediff-app .demo-side iframe{display:block;width:100%;height:384px;border:0;background:transparent}
+.maplediff-app .demo-side figcaption{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:8px 24px 0;color:var(--muted);font-size:12px}
+.maplediff-app .demo-side figcaption a{text-decoration:underline;text-underline-offset:3px}
+/* 7. Details: consistent control sizes, quiet counts, visible keyboard focus. */
+.maplediff-app .url-row input{min-height:44px;border-radius:8px;font-size:13px}
+.maplediff-app .url-row .primary{min-height:44px;padding-inline:20px;border-radius:8px}
+.maplediff-app .revision-picker select{min-height:40px;padding:8px 12px;font-size:13px}
+.maplediff-app .search input{min-height:36px;padding:8px 12px;font-size:13px}
+.maplediff-app .segmented button{padding:8px 12px}
+.maplediff-app .checkbox{min-height:36px;font-size:13px}
+.maplediff-app button:focus-visible,.maplediff-app a:focus-visible,.maplediff-app input:focus-visible,.maplediff-app select:focus-visible,.maplediff-app #diff:focus-visible,.maplediff-app summary:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+/* 8. Visual: the diff is the color-bearing content; no generated imagery. */
+/* 9. Motion: purposeful feedback only; the walkthrough plays once, then holds. */
+.maplediff-app button,.maplediff-app .registry-card{transition:background-color .16s ease-out,border-color .16s ease-out,color .16s ease-out}
+@media(max-width:1080px){.maplediff-app .intro.has-demo{grid-template-columns:1fr;gap:8px}.maplediff-app .intro-copy{padding-bottom:0}.maplediff-app .demo-side{width:100%;max-width:600px;justify-self:center}.maplediff-app h1{font-size:40px}.maplediff-app .intro-copy br:last-child{display:none}}
+@media(max-width:700px){.maplediff-app .header-inner{gap:24px}.maplediff-app .breadcrumb{margin:20px 0 24px}.maplediff-app h1{font-size:36px;letter-spacing:-.8px}.maplediff-app .intro-copy{padding:8px 0}.maplediff-app .panel-top{padding:16px}.maplediff-app .import-panel form{padding:16px}.maplediff-app #message{padding-inline:16px}.maplediff-app .revision-picker{padding:16px;gap:16px}.maplediff-app .registry-card{padding:16px}.maplediff-app .entry-heading h2{font-size:20px}.maplediff-app .legend{gap:12px}.maplediff-app .demo-side figcaption{padding-inline:16px}.maplediff-app .entry-buttons button{min-height:40px}.maplediff-app .download-buttons button{min-height:40px}}

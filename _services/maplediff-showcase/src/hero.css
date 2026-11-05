@@ -1,0 +1,31 @@
+.md-show {
+ & .ss-stage {--gutter:24px;overflow:hidden;background:transparent;border-radius:0;}
+ .md-browser {position:absolute;top:var(--gutter);left:var(--gutter);width:552px;height:480px;box-shadow:var(--ss-shadow-hero);}
+ .md-content {padding:18px;background:var(--ss-surface);min-height:100%;}
+ .md-heading {display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;gap:12px;}
+ .md-title {font-size:14px;font-weight:600;color:var(--ss-text-strong);}
+ .md-import {display:flex;align-items:center;gap:10px;}
+ .md-url {flex:1;min-width:0;}
+ .md-url .ss-field__box {font-size:12px;}
+ .md-url svg {color:var(--ss-text);flex:none;}
+ .md-controls {display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 16px;}
+ .md-revisions {padding-left:12px;display:flex;align-items:center;gap:8px;color:var(--ss-text);font-size:12px;white-space:nowrap;}
+ .md-revisions svg {flex:none;}
+ .md-actions {display:flex;align-items:center;gap:8px;}
+ .md-document {border:1px solid var(--ss-line);border-radius:6px;background:var(--ss-surface);overflow:hidden;}
+ .md-file {display:flex;align-items:center;justify-content:space-between;gap:12px;font:11px/1.5 var(--ss-mono);padding:8px 14px;border-bottom:1px solid var(--ss-line);background:var(--ss-chrome);color:var(--ss-text);}
+ .md-output {padding:12px;}
+ .md-code {font-size:12px;line-height:1.6;padding:0;}
+ .md-code .ss-code__line {will-change:transform;transition:background-color .2s,color .2s,opacity .3s;}
+ .md-filler {padding:8px 40px 24px;display:flex;flex-direction:column;gap:16px;}
+ & .ss-stage[data-layout='compact'] {--gutter:16px;}
+ & .ss-stage[data-layout='compact'] .md-browser {width:326px;height:480px;}
+ & .ss-stage[data-layout='compact'] .md-content {padding:14px;}
+ & .ss-stage[data-layout='compact'] .md-import {gap:8px;}
+ & .ss-stage[data-layout='compact'] .md-url {flex:1;}
+ & .ss-stage[data-layout='compact'] .md-controls {margin:16px 0;gap:8px;}
+ & .ss-stage[data-layout='compact'] .md-actions {gap:8px;}
+ & .ss-stage[data-layout='compact'] .md-filler {padding-inline:34px;}
+}
+
+.md-show .ss-stage[data-layout="compact"] .md-file {padding:8px 14px;}

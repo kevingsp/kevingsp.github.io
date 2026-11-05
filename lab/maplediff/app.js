@@ -9,7 +9,7 @@ try{diffWorker=new Worker(ROOT+'diff-worker.js');}catch{/* Exact diff remains av
 function message(text,error=false){$('message').textContent=text;$('message').classList.toggle('error-note',error);}
 function date(value){return new Date(value).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'});}
 async function api(path,body){const response=await fetch(API+path,{method:body?'POST':'GET',credentials:'omit',headers:body?{'Content-Type':'application/json'}:undefined,body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(45000)});let data;try{data=await response.json();}catch{throw new Error('The registry is unavailable. Please try again shortly.');}if(!response.ok)throw new Error(data.error||'The request failed.');return data;}
-function busy(value){state.busy=value;$('save-url').disabled=value;$('capture-again').disabled=value;$('save-url').textContent=value?'Saving snapshot…':'Save snapshot →';}
+function busy(value){state.busy=value;$('save-url').disabled=value;$('capture-again').disabled=value;$('save-url').textContent=value?'Saving snapshot…':'Save snapshot';}
 function option(select,value,label){const item=document.createElement('option');item.value=value;item.textContent=label;select.append(item);}
 function download(text,name){const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function entryLink(id){return ROOT+id+'/';}

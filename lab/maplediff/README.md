@@ -25,3 +25,7 @@ The HTML parser discards scripts, navigation, forms, and surrounding chrome, the
 Comparisons use exact Hirschberg LCS in a browser Worker with linear memory. The UI shows up to 1,500 diff rows at once; search examines all rows and downloads include the complete diff. Line endings and final newlines are normalized. Added/removed colors show textual edits, not necessarily buffs/nerfs.
 
 Run engine checks with `node diff.test.cjs`. The backend includes extraction, source validation, snapshot immutability, deduplication, retrieval, CORS, failed-import, and rate-limit tests. Site frontend and backend have separate deployment workflows: deploy and smoke-test the API before changing the frontend endpoint.
+
+## Design and walkthrough
+
+`design.css` applies a restrained Unslop polish while preserving features, section order and the original palette. The hero's same-origin `demo/` iframe is an illustrative, play-once React walkthrough made with Benji Taylor's Stageshow kit. Replay and a static-view control are real; the UI inside the scene is a demonstration with example notes and never writes to the registry. Reduced-motion viewers see the final comparison. Source, build instructions, credits, audit and rehearsal notes live under `_services/maplediff-showcase/`.
