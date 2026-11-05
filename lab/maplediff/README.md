@@ -1,6 +1,6 @@
 # MapleDiff
 
-Static MapleStory patch-note comparison tool at `/tools/vibe-coded/maplestory-patch-diff/`.
+Static MapleStory patch-note comparison tool at `/lab/maplediff/`.
 
 Paste original and updated notes, then compare. Includes unified/split layouts, line search, changes-only filter, swap, local draft persistence, and a unified `.diff` download. The built-in demo is fictional and labeled as such. Official notes are not fetched automatically; paste text from the regional publisher's notes.
 
