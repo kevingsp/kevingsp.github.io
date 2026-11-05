@@ -39,7 +39,7 @@ async function script(a:Act<S>){
 export function HeroDemo({still=false}:{still?:boolean}){
  useLayoutEffect(()=>{document.querySelectorAll('.md-show .ss-field__chars, .md-show .ss-field__value').forEach(node=>node.setAttribute('data-typing',''));},[])
 
- return <Stage<S> width={600} height={340} compact={{below:560,width:358,height:340}} initial={initial} poster={poster} script={still?undefined:script} play="once" cursor={{at:REST,style:'real'}} className="md-show" greys="cool" tokens={{'--ss-accent':'#b84d24','--ss-accent-soft':'#fbede6','--ss-accent-text':'#993c1a','--ss-surface':'#ffffff','--ss-canvas':'#fafbf9','--ss-chrome':'#f6f8fa','--ss-text-strong':'#24292f','--ss-text':'#656d76','--ss-line':'#d8dee4','--ss-radius-md':'6px','--ss-font':'-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif'}}>
+ return <Stage<S> width={600} height={340} compact={{below:560,width:358,height:340}} initial={initial} poster={poster} script={still?undefined:script} play="once" cursor={{at:REST,style:'real'}} className="md-show" theme="dark" greys="cool" tokens={{'--ss-accent':'#278c9a','--ss-accent-soft':'#26474a','--ss-accent-text':'#a7e9ec','--ss-surface':'#242829','--ss-canvas':'#181b1c','--ss-chrome':'#303839','--ss-text-strong':'#f0ede4','--ss-text':'#afb8b8','--ss-text-faint':'#9aacae','--ss-line':'#4c5657','--ss-success-soft':'#203c30','--ss-danger-soft':'#43292f','--ss-radius-md':'11px','--ss-radius-sm':'10px','--ss-radius-window':'18px','--ss-font':'-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif'}}>
  {(s,_rect,layout)=><>
   <Window url="nyshift.com/lab/maplediff" className="md-browser">
    <div className="md-content">

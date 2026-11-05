@@ -17,3 +17,10 @@ Fresh-eye review: initial sparse code pane and overly strong completed Saved but
 Checks: skill `npm run typecheck` and `npm run check:css` passed; production source typecheck/build passed; CSS namespaces are scoped; ordinary UI/reduced-motion/playback browser smoke checks passed. Generated recordings and dependencies are excluded from source commits.
 
 Not checked: physical phone hardware, Safari/Firefox, a separate close film of every paste/save/copy transition, and an automatic loop seam (not applicable to play-once). Timing coverage in the screenshot contact sheets is explicitly limited above; no claim is made that those gaps were sampled.
+
+## MapleStory material revision
+The user supplied their prepper-app UI and MapleStory Legion as references. Updated the scene and host to charcoal, cream, silver rims, teal utility buttons, lime save action and bright inset URL fields. The script and measured targets remain unchanged; wide controls/output spacing was reduced by 14px total to avoid the completed document nearly touching the crop edge.
+
+New source films: 600px wide opening through result at 1s intervals, and 390px phone marked states. Both source gates passed with zero never-intentional findings. Screenshot recordings remain timing-inconclusive: phone 884 frames/14.78s, largest gap54.8ms; final wide825 frames/13.76s, largest gap53ms. Motion in those gaps was not judged. The line-number/deletion-mark changes still require manual transition judgment; the script is unchanged from the earlier close inspection. Production-minified CSS generates phantom kit-override scanner reports for absent phone components, so the source route was used for instrumentation; production was checked separately for functionality, compact fit and reduced motion.
+
+Fresh-eye reviewer inspected new phone states, wide film and desktop/mobile host screenshots and returned “nothing”: no clipped controls, legibility or fit issues. New 40–80ms close transition captures and 4x glyphs were not inspected in this material-only revision; loop seam remains inapplicable to play-once. Static screenshots cannot establish complete motion coverage.

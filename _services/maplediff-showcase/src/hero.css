@@ -29,3 +29,31 @@
 }
 
 .md-show .ss-stage[data-layout="compact"] .md-file {padding:8px 14px;}
+
+/* Material palette shared with the real product. The script and targets stay stable. */
+.md-show {
+ .md-browser {border:1px solid #576568;box-shadow:inset 0 1px 0 #ffffff30,0 2px 0 #11191a,0 16px 32px #0005;}
+ .ss-window__bar {background:linear-gradient(115deg,transparent 18%,#ffffff0b 18.2%,transparent 42%),linear-gradient(#495355,#303839 52%,#2b3334 53%);border-bottom:1px solid #152022;box-shadow:inset 0 1px 0 #ffffff20;}
+ .ss-window__url {color:#c7d3d3;background:#202a2b;}
+ .md-content {background:linear-gradient(140deg,#ffffff05,transparent 60%),#242829;}
+ .ss-button {border:1px solid #616c6d;background:linear-gradient(#454c4d,#303637 48%,#24292a 50%);box-shadow:inset 0 1px 0 #fff2,inset 0 -1px 0 #0006,0 2px 0 #101718;color:#e1e9e9;text-shadow:0 1px 1px #0008;}
+ .ss-button[data-variant='primary'] {border-color:#78c2cd;background:linear-gradient(165deg,#ffffff14,transparent 46%),linear-gradient(#227482,#196675);color:#fff;box-shadow:inset 0 1px 0 #c8ffff70,0 2px 0 #102e32;}
+ .ss-button[data-variant='ghost'] {border-color:transparent;background:transparent;box-shadow:none;}
+ .md-url .ss-field__box {color:#226773;background:linear-gradient(#e4e7e5,#fff);border:1px solid #77b7be;box-shadow:inset 0 1px 3px #0002,0 1px 0 #142f33;}
+ .md-url .ss-field__placeholder {color:#4b686b;}
+ .md-url svg {color:#347c86;}
+ .md-url[data-focused] .ss-field__box {box-shadow:inset 0 1px 3px #0002,0 0 0 2px #a6f0f3;}
+ .md-document {background:#1c2425;border-radius:12px;box-shadow:inset 0 1px 3px #0003;}
+ .md-file {background:linear-gradient(#3a4546,#2b3536);color:#d6e0e0;}
+ .ss-badge {color:#bfd1d1;background:#202c2e;box-shadow:inset 0 0 0 1px #5a6b6d;}
+}
+
+.md-show {
+ .md-browser {border:1px solid #8a9391;box-shadow:inset 0 0 0 2px #191f20,inset 0 0 0 3px #626c6b,0 2px 0 #11191a,0 16px 32px #0005;padding:3px;}
+ .ss-window__bar {border-radius:13px 13px 0 0;}
+ .ss-button[data-variant='primary'] {color:#182504;text-shadow:0 1px 0 #eaffac80;border-color:#c6dc68;background:linear-gradient(165deg,#ffffff24,transparent 46%),linear-gradient(#b9d636,#9fbd21 49%,#8fad15 50%,#84a20f);box-shadow:inset 0 1px 0 #f1ffc480,0 2px 0 #313c0b;}
+ .ss-button[data-target='compare'] {border-color:#77b7be;background:linear-gradient(#227482,#196675);color:#fff;}
+}
+/* Leave a clear gap below the completed diff inside the wide crop. */
+.md-show .ss-stage[data-layout='wide'] .md-controls{margin:12px 0;}
+.md-show .ss-stage[data-layout='wide'] .md-output{padding-block:10px;}

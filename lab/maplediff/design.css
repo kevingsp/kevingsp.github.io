@@ -1,67 +1,97 @@
-/* MapleDiff polish using Unslop by Damir Sokolovsky (@heydamir), CC BY 4.0.
-   https://github.com/heydamir/unslop — existing product palette retained. */
-/* 1. Spacing: one 4px rhythm across navigation, forms, archive and viewer. */
-.maplediff-app .header-inner{height:64px;gap:32px}
-.maplediff-app .breadcrumb{margin:24px 0;gap:12px}
-.maplediff-app .panel-top{padding:16px 24px}
-.maplediff-app .import-panel form{padding:20px 24px 16px}
-.maplediff-app .url-row{gap:12px}
-.maplediff-app #message{padding-inline:24px}
-.maplediff-app #message:not(:empty){padding-bottom:20px}
-.maplediff-app .registry-panel{margin:32px 0 40px}
-.maplediff-app .registry-panel summary{margin-bottom:16px}
-.maplediff-app .registry-grid{gap:16px}
-.maplediff-app .registry-card{padding:20px;gap:8px}
-.maplediff-app .entry-heading{margin:32px 0 24px;gap:24px}
-.maplediff-app .revision-picker{padding:20px 24px;gap:24px}
-.maplediff-app .results-heading{margin:32px 0 16px}
-.maplediff-app .toolbar{gap:16px;margin-bottom:16px}
-.maplediff-app .legend{gap:24px;margin:16px 0 48px}
-.maplediff-app footer{padding:24px 0 32px}
-/* 2. Color: three readable inks; accent reserved for the action and selection. */
-.maplediff-app{--text:#24292f;--muted:#656d76;--border:#d8dee4;--orange:#b84d24;--secondary:#525a63}
-.maplediff-app .intro p{color:var(--secondary)}
-.maplediff-app .pill{border:0;padding:0;color:var(--muted);background:transparent;border-radius:0}
-.maplediff-app .registry-card[aria-current=true]{box-shadow:inset 3px 0 0 var(--orange);border-color:var(--border)}
-.maplediff-app .registry-card:hover{background:#f6f8fa;border-color:#b8c1ca}
-/* 3. Icons: remove the decorative star and command glyph; text owns navigation. */
-.maplediff-app .brand{font-size:18px;font-weight:600;letter-spacing:0}
-.maplediff-app .brand span{font-size:14px}
-/* 4–5. Copy and type: product-specific nouns, sentence case, readable archive meta. */
-.maplediff-app{font-size:14px;font-variant-numeric:tabular-nums}
-.maplediff-app button{font-size:13px;font-weight:500;min-height:36px;padding:8px 12px}
-.maplediff-app label{font-size:13px;font-weight:500}
-.maplediff-app h2{font-size:15px;font-weight:500}
-.maplediff-app .product-name{font-size:14px;color:var(--orange);margin:0 0 16px;font-weight:500}
-.maplediff-app h1{font-size:40px;line-height:1.12;letter-spacing:-1px;font-weight:500;margin:0 0 20px}
-.maplediff-app h1 span{color:var(--text)}
-.maplediff-app .intro-copy>p:last-child{font-size:14px;line-height:1.8;margin:0}
-.maplediff-app .pill,.maplediff-app .hint,.maplediff-app .import-help,.maplediff-app .revision-picker p,.maplediff-app footer{font-size:12px;line-height:1.6}
-.maplediff-app .registry-panel summary{font-size:14px;font-weight:500}
-.maplediff-app .registry-card h3{font-size:14px;line-height:1.5;font-weight:500}
-.maplediff-app .registry-card span{font-size:12px}
-.maplediff-app .eyebrow{font-family:inherit;font-size:12px;letter-spacing:0;color:var(--muted)}
-.maplediff-app .entry-heading h2{font-size:24px;line-height:1.4;font-weight:500;letter-spacing:0;margin:8px 0}
-.maplediff-app .results-heading h2{font-size:20px;letter-spacing:0}
-.maplediff-app .results-heading p{font-size:12px;margin-top:8px}
-.maplediff-app #message{font-size:12px}
-/* 6. Layout: use the hero's right half for one readable product scene. */
-.maplediff-app .intro.has-demo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,600px);gap:24px;align-items:center;margin-bottom:24px}
+/* Material theme informed by kevingsp/prepper-app and the user's mockup.
+   Review structure: Unslop by Damir Sokolovsky (@heydamir), CC BY 4.0,
+   https://github.com/heydamir/unslop . User-directed skeuomorphic look. */
+.maplediff-app {
+  color-scheme:dark;
+  --bg:#181b1c;--surface:#242829;--text:#f0ede4;--muted:#afb8b8;
+  --border:#4c5657;--accent:#87dbe0;--orange:var(--accent);
+  --cream:#ffe7c1;--green:#a9e4b4;--red:#ffb3b9;--add:#203c30;--del:#43292f;
+  --button-face:linear-gradient(180deg,#454c4d 0%,#303637 48%,#24292a 50%,#252a2b 100%);
+  --button-shadow:inset 0 1px 0 #ffffff24,inset 0 -2px 0 #0005,0 2px 0 #101415,0 3px 5px #0003;
+  min-height:100vh;font-size:14px;font-variant-numeric:tabular-nums;
+  background:radial-gradient(ellipse 750px 500px at 76% 12%,#28434580,transparent 80%),radial-gradient(ellipse 650px 600px at 5% 0%,#41464566,transparent 80%),var(--bg);
+}
+.maplediff-app .site-header{background:linear-gradient(180deg,#343a3be8,#202627f5);border-bottom:1px solid #566061;box-shadow:0 1px 0 #0008}
+.maplediff-app .header-inner{height:68px;gap:32px}
+.maplediff-app .brand{font-size:18px;font-weight:750;letter-spacing:.5px;color:var(--cream);text-shadow:0 1px 1px #000}
+.maplediff-app .brand span{font-size:13px;letter-spacing:0}
+.maplediff-app .header-inner>a:not(.brand){font-size:12px;color:#c3cccc}
+.maplediff-app .breadcrumb{margin:24px 0 16px;gap:12px}
+.maplediff-app .intro.has-demo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,600px);gap:24px;align-items:center;margin-bottom:32px}
 .maplediff-app .intro-copy{padding-bottom:24px}
+.maplediff-app .product-name{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--accent);margin:0 0 20px;font-weight:650}
+.maplediff-app .product-name::before{content:'±';display:grid;place-items:center;width:32px;height:32px;border-radius:10px;border:1px solid #7bd1d5;background:linear-gradient(155deg,#b1f2ee55,transparent 48%),linear-gradient(#299caf,#196a73);color:#e3ffff;font-size:23px;line-height:1;box-shadow:inset 0 1px 0 #fff6,0 2px 0 #0a3338;text-shadow:0 1px 1px #123e43}
+.maplediff-app h1{font-size:46px;line-height:1.13;letter-spacing:-1.4px;font-weight:750;margin:0 0 20px;color:var(--cream);text-shadow:0 2px 0 #101314}
+.maplediff-app h1 span{color:#f0ede4}
+.maplediff-app .intro-copy>p:last-child{font-size:14px;line-height:1.8;color:#bec8c8;margin:0}
 .maplediff-app .demo-side{margin:0;min-width:0}
 .maplediff-app .demo-side iframe{display:block;width:100%;height:384px;border:0;background:transparent}
-.maplediff-app .demo-side figcaption{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:8px 24px 0;color:var(--muted);font-size:12px}
-.maplediff-app .demo-side figcaption a{text-decoration:underline;text-underline-offset:3px}
-/* 7. Details: consistent control sizes, quiet counts, visible keyboard focus. */
-.maplediff-app .url-row input{min-height:44px;border-radius:8px;font-size:13px}
-.maplediff-app .url-row .primary{min-height:44px;padding-inline:20px;border-radius:8px}
-.maplediff-app .revision-picker select{min-height:40px;padding:8px 12px;font-size:13px}
-.maplediff-app .search input{min-height:36px;padding:8px 12px;font-size:13px}
-.maplediff-app .segmented button{padding:8px 12px}
-.maplediff-app .checkbox{min-height:36px;font-size:13px}
-.maplediff-app button:focus-visible,.maplediff-app a:focus-visible,.maplediff-app input:focus-visible,.maplediff-app select:focus-visible,.maplediff-app #diff:focus-visible,.maplediff-app summary:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
-/* 8. Visual: the diff is the color-bearing content; no generated imagery. */
-/* 9. Motion: purposeful feedback only; the walkthrough plays once, then holds. */
-.maplediff-app button,.maplediff-app .registry-card{transition:background-color .16s ease-out,border-color .16s ease-out,color .16s ease-out}
-@media(max-width:1080px){.maplediff-app .intro.has-demo{grid-template-columns:1fr;gap:8px}.maplediff-app .intro-copy{padding-bottom:0}.maplediff-app .demo-side{width:100%;max-width:600px;justify-self:center}.maplediff-app h1{font-size:40px}.maplediff-app .intro-copy br:last-child{display:none}}
-@media(max-width:700px){.maplediff-app .header-inner{gap:24px}.maplediff-app .breadcrumb{margin:20px 0 24px}.maplediff-app h1{font-size:36px;letter-spacing:-.8px}.maplediff-app .intro-copy{padding:8px 0}.maplediff-app .panel-top{padding:16px}.maplediff-app .import-panel form{padding:16px}.maplediff-app #message{padding-inline:16px}.maplediff-app .revision-picker{padding:16px;gap:16px}.maplediff-app .registry-card{padding:16px}.maplediff-app .entry-heading h2{font-size:20px}.maplediff-app .legend{gap:12px}.maplediff-app .demo-side figcaption{padding-inline:16px}.maplediff-app .entry-buttons button{min-height:40px}.maplediff-app .download-buttons button{min-height:40px}}
+/* Framed panels have a fine bright edge, dark lip and hard chrome reflection. */
+.maplediff-app .panel{border:1px solid var(--border);border-radius:20px;background:linear-gradient(140deg,#ffffff06,transparent 45%),var(--surface);box-shadow:inset 0 1px 0 #ffffff15,0 0 0 1px #111718,0 8px 24px #0002}
+.maplediff-app .panel-top{padding:18px 24px;background:linear-gradient(117deg,transparent 25%,#fff1 25.2%,#ffffff03 42%,transparent 42.2%),linear-gradient(180deg,#424b4c,#303738 51%,#2a3132 52%);border-bottom:1px solid #131a1b;box-shadow:inset 0 1px 0 #ffffff20,0 1px 0 #ffffff0b}
+.maplediff-app h2{font-size:16px;font-weight:650;color:var(--cream)}
+.maplediff-app .pill{padding:3px 9px;color:#b7d4d4;background:#172527;border:1px solid #506568;border-radius:20px;font-size:11px;font-weight:500;box-shadow:inset 0 1px 2px #0004}
+.maplediff-app .import-panel form{padding:24px 24px 20px}
+.maplediff-app label{font-size:13px;font-weight:550;color:#d3dcdc}
+.maplediff-app .url-row{gap:12px;margin-top:12px}
+.maplediff-app .url-row input{min-height:48px;border:2px solid #6dabb1;border-radius:14px;background:linear-gradient(#e4e7e5,#fff);color:#226773;font:14px/1.5 var(--mono);box-shadow:inset 0 2px 4px #0002,0 0 0 1px #173b40,0 2px 0 #0004;padding:10px 14px;color-scheme:light}
+.maplediff-app .url-row input::placeholder{color:#4b686b;opacity:1}
+.maplediff-app button{font-size:13px;font-weight:600;min-height:40px;padding:9px 15px;border:1px solid #616c6d;border-radius:13px;background:var(--button-face);box-shadow:var(--button-shadow);color:#e1e9e9;text-shadow:0 1px 1px #0008;transition:filter .15s,transform .12s,box-shadow .12s}
+.maplediff-app button:hover:not(:disabled){filter:brightness(1.12)}
+.maplediff-app button:active:not(:disabled){transform:translateY(1px);box-shadow:inset 0 2px 3px #0004,0 1px 0 #111}
+.maplediff-app .url-row .primary{min-height:48px;padding-inline:24px;background:linear-gradient(165deg,#ffffff14,transparent 46%),linear-gradient(180deg,#227482,#1d7080 49%,#196675 50%,#196571);border:1px solid #7bced7;box-shadow:inset 0 1px 0 #c8ffff70,inset 0 -2px 0 #103c4240,0 2px 0 #102e32,0 3px 7px #0005;color:#fff}
+.maplediff-app .import-help,.maplediff-app .hint,.maplediff-app .revision-picker p,.maplediff-app footer{font-size:12px;line-height:1.65}
+.maplediff-app #message{padding-inline:24px;color:var(--accent);font-size:13px}
+.maplediff-app #message:not(:empty){padding-bottom:20px}
+.maplediff-app .registry-panel{margin:32px 0 40px}
+.maplediff-app .registry-panel summary{margin-bottom:16px;font-size:15px;font-weight:600;color:var(--cream)}
+.maplediff-app .registry-grid{gap:16px}
+.maplediff-app .registry-card{position:relative;padding:20px;gap:8px;border-radius:16px;border:1px solid #4a5556;background:linear-gradient(160deg,#3a4243 0%,#2c3334 35%,#272d2e 100%);box-shadow:inset 0 1px 0 #ffffff1c,0 2px 0 #101718;transition:border-color .15s,background-color .15s}
+.maplediff-app .registry-card:hover{border-color:#82bdc1;background:linear-gradient(160deg,#414d4e,#2b3435);text-decoration:none}
+.maplediff-app .registry-card[aria-current=true]{border-color:#80c7cc;box-shadow:inset 3px 0 0 #72cdd4,inset 0 1px 0 #fff2,0 2px 0 #101718}
+.maplediff-app .registry-card h3{font-size:14px;line-height:1.5;font-weight:600;color:#f0e7d8}
+.maplediff-app .registry-card span{font-size:12px}
+.maplediff-app .entry-heading{margin:40px 0 24px;gap:24px}
+.maplediff-app .eyebrow{font-family:inherit;font-size:12px;letter-spacing:0;color:var(--accent)}
+.maplediff-app .entry-heading h2{font-size:26px;line-height:1.4;font-weight:650;letter-spacing:-.5px;margin:8px 0}
+.maplediff-app .entry-heading a{text-decoration:underline;text-underline-offset:3px}
+.maplediff-app .revision-picker{padding:24px;gap:24px}
+.maplediff-app .revision-picker select,.maplediff-app .search input{min-height:44px;padding:10px 12px;font-size:13px;color:var(--text);background:#182021;border:1px solid #59686a;border-radius:12px;box-shadow:inset 0 2px 4px #0005,0 1px 0 #fff1}
+.maplediff-app select option{background:#202829;color:var(--text)}
+.maplediff-app .results-heading{margin:32px 0 16px;gap:16px}
+.maplediff-app .results-heading h2{font-size:22px;letter-spacing:-.4px}
+.maplediff-app .results-heading p{font-size:12px;margin-top:8px}
+.maplediff-app .toolbar{gap:16px;margin-bottom:16px}
+.maplediff-app .segmented{padding:3px;background:#11191a;border:1px solid #445052;border-radius:15px;gap:3px;box-shadow:inset 0 1px 3px #0008}
+.maplediff-app .segmented button{border-radius:11px;border:1px solid transparent;background:transparent;box-shadow:none;margin:0;padding:8px 12px;min-height:34px;color:#b7c2c3}
+.maplediff-app .segmented [aria-pressed=true]{background:var(--button-face);border-color:#647577;box-shadow:inset 0 1px 0 #fff2,0 1px 2px #0006;color:#e5ffff}
+.maplediff-app .checkbox{min-height:40px;font-size:13px}
+.maplediff-app input[type=checkbox]{accent-color:#278e9b;width:16px;height:16px}
+.maplediff-app .file{background:#1c2425;border-radius:16px}
+.maplediff-app .file-header{padding:16px 20px;background:linear-gradient(#3a4546,#2b3536);border-bottom:1px solid #556062;color:#d6e0e0}
+.maplediff-app .num,.maplediff-app .split-table .blank{background:#182021;color:#9aacae}
+.maplediff-app .addition .num{background:#254735;color:#b0d8b9}
+.maplediff-app .deletion .num{background:#513039;color:#e1b4be}
+.maplediff-app .addition .code{color:#d7efde}
+.maplediff-app .deletion .code{color:#f7dbe0}
+.maplediff-app .context-gap td{background:#2b3536}
+.maplediff-app .snapshot-text{color:#dce3df}
+.maplediff-app #diff{scrollbar-color:#586d70 #172022}
+.maplediff-app .legend{gap:24px;margin:16px 0 48px}
+.maplediff-app .legend .green{background:#a9e4b4}
+.maplediff-app .legend .red{background:#ffb3b9}
+.maplediff-app footer{padding:24px 0 32px;border-color:#3d494b}
+.maplediff-app button:focus-visible,.maplediff-app a:focus-visible,.maplediff-app input:focus-visible,.maplediff-app select:focus-visible,.maplediff-app #diff:focus-visible,.maplediff-app summary:focus-visible{outline:2px solid #a6f0f3;outline-offset:4px}
+@media(max-width:1080px){.maplediff-app .intro.has-demo{grid-template-columns:1fr;gap:8px}.maplediff-app .intro-copy{padding-bottom:0}.maplediff-app .demo-side{width:100%;max-width:600px;justify-self:center}.maplediff-app .intro-copy br:last-child{display:none}}
+@media(max-width:700px){.maplediff-app .header-inner{gap:24px;height:64px}.maplediff-app .breadcrumb{margin:20px 0 24px}.maplediff-app h1{font-size:36px;letter-spacing:-1px}.maplediff-app .intro-copy{padding:8px 0}.maplediff-app .product-name{margin-bottom:16px}.maplediff-app .panel-top{padding:16px;gap:8px;align-items:flex-start;flex-wrap:wrap}.maplediff-app .panel-top h2{font-size:15px}.maplediff-app .panel-top .pill{white-space:nowrap;font-size:10px}.maplediff-app .import-panel form{padding:20px 16px}.maplediff-app .url-row input{font-size:12px}.maplediff-app #message{padding-inline:16px}.maplediff-app .revision-picker{padding:20px 16px;gap:16px}.maplediff-app .registry-card{padding:20px}.maplediff-app .entry-heading h2{font-size:22px}.maplediff-app .legend{gap:12px}.maplediff-app .file-header{padding:14px 10px}.maplediff-app .entry-buttons button,.maplediff-app .download-buttons button{padding-inline:12px}}
+@media(prefers-reduced-motion:reduce){.maplediff-app button,.maplediff-app .registry-card{transition:none}}
+@media(forced-colors:active){.maplediff-app .url-row input{border-color:FieldText}.maplediff-app .registry-card[aria-current=true]{outline:2px solid Highlight}.maplediff-app .segmented [aria-pressed=true]{border-color:Highlight}}
+/* MapleStory Legion reference: silver rims, recessed wells and lime confirmation. */
+.maplediff-app .panel{border-color:#8a9391;box-shadow:inset 0 0 0 2px #191f20,inset 0 0 0 3px #626c6b,inset 0 4px 0 #d5d9ce20,0 0 0 1px #101718,0 8px 24px #0003;padding:3px}
+.maplediff-app .panel-top{border-radius:15px 15px 0 0;border-top:1px solid #c6cec960;background-color:#303738}
+.maplediff-app .revision-picker{padding:24px}
+.maplediff-app .file{padding:3px}
+.maplediff-app .file-header{border-radius:11px 11px 0 0}
+.maplediff-app .url-row .primary{color:#182504;text-shadow:0 1px 0 #eaffac80;border-color:#c6dc68;background:linear-gradient(165deg,#ffffff24,transparent 46%),linear-gradient(180deg,#b9d636,#9fbd21 49%,#8fad15 50%,#84a20f);box-shadow:inset 0 1px 0 #f1ffc480,inset 0 -2px 0 #40500a60,0 2px 0 #313c0b,0 3px 7px #0005}
+.maplediff-app #capture-again{border-color:#77b7be;background:linear-gradient(#25808e,#196675);color:#fff}
+@media(max-width:700px){.maplediff-app .revision-picker{padding:20px 16px}}
