@@ -10,8 +10,8 @@ function verify(a,b) {
 }
 for(const [a,b] of [['',''],['','new'],['old',''],['same','same'],['a\r\nb\r\n','a\nb\n'],['a\na\nb','a\nb\na'],['before\n\nend','after\n\nend'],['中文\n🍁','中文\n🍄'],['<script>alert(1)</script>','<img onerror=alert(1)>']]) verify(a,b);
 assert.equal(diff('x','y').filter(r=>r.type==='addition').length,1);
-assert.throws(()=>diff('x\n'.repeat(2001),''),/2,000/);
-assert.throws(()=>diff('x'.repeat(200001),''),/200,000/);
+assert.throws(()=>diff('x\n'.repeat(8001),''),/8,000/);
+assert.throws(()=>diff('x'.repeat(300001),''),/300,000/);
 assert.equal(exportDiff('same','same'),'');
 assert.equal(exportDiff('x','y'),'--- original-patch-notes.txt\n+++ updated-patch-notes.txt\n@@ -1,1 +1,1 @@\n-x\n+y\n');
 let seed=42;function random(){seed=(seed*1664525+1013904223)>>>0;return seed/2**32;}

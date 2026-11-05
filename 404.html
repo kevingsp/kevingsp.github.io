@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>NYshift — Finding your page</title><script>
+const match=location.pathname.match(/^\/lab\/maplediff\/([a-f0-9]{20})\/?$/);
+if(match){const params=new URLSearchParams(location.search);params.set('entry',match[1]);location.replace('/lab/maplediff/?'+params.toString());}
+</script><style>body{background:#0b0e0c;color:#f0f2e8;font:16px/1.7 Arial,sans-serif;max-width:600px;margin:15vh auto;padding:24px}a{color:#d5ff62}</style></head><body><h1>Looking for your next shift?</h1><p>If this is a saved MapleDiff link, it will open automatically.</p><p><a href="/lab/maplediff/">Open MapleDiff</a> · <a href="/lab/">Visit The Lab</a> · <a href="/">Home</a></p></body></html>
