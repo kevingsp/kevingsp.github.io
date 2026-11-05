@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MapleDiff — MapleStory patch notes</title>
+<meta name="description" content="Compare MapleStory patch notes with GitHub-style additions, removals, and side-by-side views. A free, private, browser-based tool.">
+<link rel="stylesheet" href="./style.css">
+<script defer src="./diff.js"></script><script defer src="./app.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a class="brand" href="../../../">KGS<span>/ tools</span></a><a href="../">← Vibe coded</a><a class="source-link" href="https://github.com/kevingsp/kevingsp.github.io">View source →</a></div></header>
+<main>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../">Tools</a><span>/</span><a href="../">Vibe coded</a><span>/</span><span>MapleDiff</span></nav>
+<div class="intro"><div><div class="eyebrow"><span class="leaf" aria-hidden="true">✳</span> A LITTLE TOOL FOR THE MAPLE WORLD</div><h1>Every patch. <span>Every change.</span></h1><p>MapleStory patch notes, with the clarity of a pull request.<br>Compare two versions and see exactly what changed.</p></div><div class="diff-art" aria-hidden="true"><div>@@ Maple World @@</div><span>− What it used to be.</span><strong>+ What comes next.</strong><small>patch-notes.diff</small></div></div>
+<section class="editor panel" aria-labelledby="editor-title">
+<div class="panel-top"><h2 id="editor-title">Compare patch notes</h2><span class="pill">Runs in your browser</span></div>
+<div class="editor-description">Paste the original and revised notes below. Compare updates to one patch, or changes between patches.</div>
+<div class="inputs"><div><label for="before">Base <span>Original notes</span></label><textarea id="before" spellcheck="false" placeholder="Paste the original patch notes…" maxlength="200000"></textarea></div><div><label for="after">Compare <span>Updated notes</span></label><textarea id="after" spellcheck="false" placeholder="Paste the updated patch notes…" maxlength="200000"></textarea></div></div>
+<div class="editor-actions"><button id="compare" class="primary">Compare changes <span aria-hidden="true">→</span></button><button id="swap">⇄ Swap</button><button id="example">Load demo</button><button id="clear" class="quiet">Clear</button><span class="hint">Up to 2,000 lines per version</span></div>
+<p id="message" role="status" aria-live="polite"></p>
+</section>
+<section id="results" aria-labelledby="results-title">
+<div class="results-heading"><div><h2 id="results-title">Changes <span id="demo-badge" class="pill">Demo</span></h2><p id="summary" aria-live="polite"></p></div><button id="download">↓ Download .diff</button></div>
+<div class="toolbar"><div class="segmented" role="group" aria-label="Diff layout"><button id="unified" aria-pressed="true">Unified</button><button id="split" aria-pressed="false">Split</button></div><label class="checkbox"><input type="checkbox" id="changes-only"> Changes only</label><label class="search"><span class="sr-only">Search diff lines</span><input id="search" type="search" placeholder="Find a skill, boss, or change…"></label><span id="matches" class="hint" aria-live="polite"></span></div>
+<div class="file panel"><div class="file-header"><span aria-hidden="true">⌘</span><strong>maplestory / patch-notes.txt</strong><span class="counts"><span id="added"></span><span id="removed"></span></span></div><div id="diff" tabindex="0" aria-label="Patch notes diff"></div></div>
+<div class="legend"><span><i class="green"></i> + Added line</span><span><i class="red"></i> − Removed line</span><span>Line changes don’t necessarily mean buffs or nerfs.</span></div>
+</section>
+<footer><span>Built by <a href="../../../">Kevin G. Salinas</a> · Tools / Vibe coded</span><span>Unofficial fan tool. MapleStory belongs to Nexon.</span></footer>
+</main>
+<noscript><p>This tool needs JavaScript to compare notes. Enable JavaScript and reload.</p></noscript>
+</body></html>
