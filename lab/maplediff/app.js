@@ -22,7 +22,7 @@ async function loadRegistry(more=false){const data=await api('/v1/entries'+(more
 async function getEntry(id){if(!state.entryCache.has(id))state.entryCache.set(id,await api('/v1/entries/'+id));return state.entryCache.get(id);}
 async function getSnapshot(id,revision){const key=id+'/'+revision;if(!state.snapshotCache.has(key))state.snapshotCache.set(key,await api('/v1/snapshots/'+key));return state.snapshotCache.get(key);}
 function revisionOptions(select,revisions,selected){select.replaceChildren();for(const r of [...revisions].reverse())option(select,r.revision,`${date(r.capturedAt)} · ${r.revision.slice(0,7)}`);if(selected&&revisions.some(r=>r.revision===selected))select.value=selected;}
-async function selectBase(id,revision){$('base-revision').hidden=!id;if(!id){$('base-revision').replaceChildren();return;}const entry=await getEntry(id);revisionOptions($('base-revision'),entry.revisions,revision);}
+async function selectBase(id,revision){$('base-revision').hidden=!id;if(!id){$('base-revision').replaceChildren();return;}const entry=await getEntry(id);if(revision&&!entry.revisions.some(r=>r.revision===revision))throw new Error('The comparison revision in this link was not found.');revisionOptions($('base-revision'),entry.revisions,revision);}
 async function openEntry(id,params=new URLSearchParams(),preferredBase=null){
  const ticket=++viewRequest;
  message('Loading saved patch notes…');
@@ -44,7 +44,7 @@ function updateURL(){if(!state.entry||!state.after)return;const params=new URLSe
 async function computeDiff(before,after){
  if(!diffWorker)return MapleDiff.diff(before,after);
  const request=++workerRequest;
- return new Promise((resolve,reject)=>{const handler=event=>{if(event.data.request!==request)return;diffWorker.removeEventListener('message',handler);event.data.error?reject(new Error(event.data.error)):resolve(event.data.rows);};diffWorker.addEventListener('message',handler);diffWorker.postMessage({request,before,after});});
+ return new Promise((resolve,reject)=>{const worker=diffWorker;const cleanup=()=>{worker.removeEventListener('message',handler);worker.removeEventListener('error',failed);};const handler=event=>{if(event.data.request!==request)return;cleanup();event.data.error?reject(new Error(event.data.error)):resolve(event.data.rows);};const failed=event=>{event.preventDefault();cleanup();worker.terminate();diffWorker=null;try{resolve(MapleDiff.diff(before,after));}catch(error){reject(error);}};worker.addEventListener('message',handler);worker.addEventListener('error',failed);worker.postMessage({request,before,after});});
 }
 async function showSelection(){
  const ticket=++viewRequest;const entry=state.entry;if(!entry)return;
