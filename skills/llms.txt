@@ -1,0 +1,59 @@
+# NYshift skills
+
+A hosted copy of 44 project skills, curated through Playful Design.
+Original instructions are preserved. Markdown downloads contain instructions only; the complete ZIP includes all references, scripts, assets, and supplied licenses.
+
+- Catalog: https://nyshift.com/skills/
+- JSON registry: https://nyshift.com/skills/registry.json
+- Complete ZIP: https://nyshift.com/skills/downloads/nyshift-design-skills-51acd8d.zip
+- ZIP SHA-256: b8dc73159dcc8f3fdaf759095873be69975cc274073fec1ecb0d2dc267c9f079
+- Upstream commit: 51acd8d581c1a64f7b6d91aeb3a800c4671883ac
+- Install all: npx skills add kevingsp/kevingsp.github.io
+- Install one: npx skills add kevingsp/kevingsp.github.io --skill <name>
+
+## Skills
+
+- [Alignment](https://nyshift.com/skills/raw/alignment.txt): Measure spacing, edges, centering, and visual weight in a running page. By Raphael Salaja.
+- [Animate](https://nyshift.com/skills/raw/animate.txt): Build purposeful web animations, from the first decision to the final frame. By Emil Kowalski.
+- [Animate for Expo](https://nyshift.com/skills/raw/animate-expo.txt): Author native motion and gestures with Expo and Reanimated. By Emil Kowalski.
+- [Animation performance](https://nyshift.com/skills/raw/animation-performance.txt): Find dropped frames and keep motion within the rendering budget. By Emil Kowalski.
+- [Animation vocabulary](https://nyshift.com/skills/raw/animation-vocabulary.txt): Find the right name for the motion you have in mind. By Emil Kowalski.
+- [Apple design](https://nyshift.com/skills/raw/apple-design.txt): Apply physical gestures, springs, materials, and typography to interfaces. By Emil Kowalski.
+- [Audit](https://nyshift.com/skills/raw/audit.txt): Get a ranked review across the full interface skills collection. By Raphael Salaja.
+- [Avatar](https://nyshift.com/skills/raw/avatar.txt): Turn an object into an expressive, animated character. By Raphael Salaja.
+- [Blank page](https://nyshift.com/skills/raw/blank-page.txt): Turn a one-line creative brief into a grounded motion direction. By Stewdio.
+- [Bots](https://nyshift.com/skills/raw/bots.txt): Build a portfolio for the Grok Bots you choose to share. By Raphael Salaja.
+- [Break UI](https://nyshift.com/skills/raw/break-ui.txt): Stress-test a screen with realistic worst-case data. By Emil Kowalski.
+- [Color](https://nyshift.com/skills/raw/color.txt): Check contrast, semantic color roles, and dark-mode palettes. By Raphael Salaja.
+- [Copy](https://nyshift.com/skills/raw/copy.txt): Write short, clear labels and interface descriptions. By Raphael Salaja.
+- [Deconstruct](https://nyshift.com/skills/raw/deconstruct.txt): Break an interaction into states and a timeline you can inspect. By Raphael Salaja.
+- [Defaults](https://nyshift.com/skills/raw/defaults.txt): Establish the details that make a screen feel finished. By Raphael Salaja.
+- [Design engineering](https://nyshift.com/skills/raw/emil-design-eng.txt): Review UI craft, polish, component details, and motion decisions. By Emil Kowalski.
+- [Find animation opportunities](https://nyshift.com/skills/raw/find-animation-opportunities.txt): Find the few moments where motion would actually help. By Emil Kowalski.
+- [Frames](https://nyshift.com/skills/raw/frames.txt): Measure interaction performance and prove the improvement. By Raphael Salaja.
+- [Gather](https://nyshift.com/skills/raw/gather.txt): Collect visual references before starting a design. By Raphael Salaja.
+- [Icons](https://nyshift.com/skills/raw/icons.txt): Fill gaps in an icon set while keeping its existing style. By Raphael Salaja.
+- [Improve animations](https://nyshift.com/skills/raw/improve-animations.txt): Audit motion and write practical implementation plans. By Emil Kowalski.
+- [Keyboard](https://nyshift.com/skills/raw/keyboard.txt): Check an interface using only the keyboard. By Raphael Salaja.
+- [Lab](https://nyshift.com/skills/raw/lab.txt): Show real components, variants, and states in one temporary workspace. By Raphael Salaja.
+- [Match](https://nyshift.com/skills/raw/match.txt): Recreate a reference from measured values and compare the result. By Raphael Salaja.
+- [Mobile native](https://nyshift.com/skills/raw/mobile-native.txt): Polish mobile web behavior, touch targets, scrolling, and safe areas. By Emil Kowalski.
+- [Motion](https://nyshift.com/skills/raw/motion.txt): Set consistent durations, easing, gestures, and reduced-motion behavior. By Raphael Salaja.
+- [Pick a UI library](https://nyshift.com/skills/raw/pick-ui-library.txt): Choose a maintained library for a specific interface problem. By Emil Kowalski.
+- [Playful Design Router](https://nyshift.com/skills/raw/playful-design-router.txt): Choose the right design skill for the task at hand. By Playful Design.
+- [Prose](https://nyshift.com/skills/raw/prose.txt): Write clear posts, case studies, and design breakdowns. By Raphael Salaja.
+- [Prototype](https://nyshift.com/skills/raw/prototype.txt): Compare several working design directions before choosing one. By Raphael Salaja.
+- [Remove animations](https://nyshift.com/skills/raw/remove-animations.txt): Remove motion that makes an interface slower or harder to use. By Emil Kowalski.
+- [Restraint](https://nyshift.com/skills/raw/restraint.txt): Keep changes small, purposeful, and easy to review. By Raphael Salaja.
+- [Reuse](https://nyshift.com/skills/raw/reuse.txt): Build with the project’s existing components and conventions. By Raphael Salaja.
+- [Review animations](https://nyshift.com/skills/raw/review-animations.txt): Give motion code a focused, demanding second look. By Emil Kowalski.
+- [Rule](https://nyshift.com/skills/raw/rule.txt): Turn a recurring correction into a clear project rule. By Raphael Salaja.
+- [Scope](https://nyshift.com/skills/raw/scope.txt): Finish the requested work while preserving what already works. By Raphael Salaja.
+- [Ship](https://nyshift.com/skills/raw/ship.txt): Release a change, watch the checks, and confirm it is live. By Raphael Salaja.
+- [Sketchbook](https://nyshift.com/skills/raw/sketchbook.txt): Explore small interaction ideas in a reusable visual workspace. By Raphael Salaja.
+- [Sonner toasts](https://nyshift.com/skills/raw/ask-sonner.txt): Build and troubleshoot React toast notifications with Sonner. By Emil Kowalski.
+- [Stageshow](https://nyshift.com/skills/raw/stageshow.txt): Create believable product illustrations and animated walkthroughs. By Benji Taylor.
+- [Verify](https://nyshift.com/skills/raw/verify.txt): Check the running result before calling the work done. By Raphael Salaja.
+- [Viewports](https://nyshift.com/skills/raw/viewports.txt): Check responsive layouts, breakpoint edges, and enlarged text. By Raphael Salaja.
+- [Web interface guidelines](https://nyshift.com/skills/raw/web-design-guidelines.txt): Review accessibility, forms, focus, motion, and interface behavior. By Vercel.
+- [Write Swift](https://nyshift.com/skills/raw/write-swift.txt): Write modern Swift with clear models and safe concurrency. By Emil Kowalski.

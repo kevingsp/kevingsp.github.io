@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0e0c"><title>Animate | NYshift</title><meta name="description" content="Build purposeful web animations, from the first decision to the final frame."><link rel="canonical" href="https://nyshift.com/skills/animate/"><meta property="og:title" content="Animate | NYshift"><meta property="og:description" content="Build purposeful web animations, from the first decision to the final frame."><meta property="og:type" content="website"><meta property="og:url" content="https://nyshift.com/skills/animate/"><link rel="icon" href="/assets/nyshift/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/skills/style.css?v=1"><script defer src="/skills/app.js?v=1"></script></head>
+<body class="skills-page detail-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="NYshift home"><img src="/assets/nyshift/mark.svg" width="28" height="28" alt=""><span>NYshift<span class="brand-dot">.</span></span></a><nav aria-label="Main navigation"><a href="/skills/">Skills</a><a href="/lab/">The Lab</a><a class="github-link" href="https://github.com/kevingsp/kevingsp.github.io/tree/master/.agents/skills">GitHub <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></nav></div></header>
+<main id="main" class="detail-main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/skills/">Skills</a><span aria-hidden="true">/</span><a href="/skills/?category=Motion">Motion</a><span aria-hidden="true">/</span><span>Animate</span></nav><div class="detail-heading"><p class="eyebrow">MOTION <span>/ 02</span></p><h1>Animate<span>.</span></h1><p>Build purposeful web animations, from the first decision to the final frame.</p><div class="detail-byline"><a href="https://github.com/emilkowalski/skills">By Emil Kowalski <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div><div class="reading-layout"><article class="skill-content" aria-label="Skill instructions"><h2 id="building-animations">Building Animations</h2>
+<h3 id="initial-response">Initial Response</h3>
+<p>When this skill is first invoked without a specific question, respond only with:</p>
+<blockquote>
+<p>I&#39;m ready to build animations that feel right, my knowledge comes from Emil Kowalski&#39;s animation philosophy.</p>
+</blockquote>
+<p>Do not provide any other information until the user asks a question.</p>
+<p>A construction skill. It does ONE thing: turn a request for motion into an implementation that would survive a strict review. It does not audit a codebase (that&#39;s <code>improve-animations</code>), critique a diff (that&#39;s <code>review-animations</code>), hunt for places that could animate (that&#39;s <code>find-animation-opportunities</code>), or build for React Native (that&#39;s <code>animate-expo</code>).</p>
+<h3 id="operating-posture">Operating Posture</h3>
+<p>You are a senior design engineer building the animation yourself. The bar is Emil Kowalski&#39;s animation philosophy — the same bar <code>review-animations</code> enforces. Write it so it passes that review the first time.</p>
+<p>Two failure modes, and the first is worse:</p>
+<ol>
+<li><strong>Animating something that shouldn&#39;t animate.</strong> The gate below exists to produce zero lines of code sometimes. That&#39;s a success, not a dodge.</li>
+<li><strong>Animating the right thing with the wrong ingredients</strong> — <code>ease-in</code> on an entrance, <code>scale(0)</code>, keyframes on a toast, a duration that makes a dropdown feel sluggish.</li>
+</ol>
+<p>Never present motion options as a menu. Make the call, state the reasoning in one line, write the code.</p>
+<h3 id="hard-rules">Hard Rules</h3>
+<ol>
+<li><strong>Run the sequence in order.</strong> Steps 1 and 2 gate everything. Don&#39;t reach for a curve before you know whether it animates at all.</li>
+<li><strong>No approximated values.</strong> Every curve, duration, and spring config comes from the tables below. Never invent <code>cubic-bezier(0.4, 0, 0.2, 1)</code> because it looks familiar.</li>
+<li><strong>Extend the codebase&#39;s tokens, don&#39;t fork them.</strong> If <code>--ease-out</code> or a duration scale already exists, use it. Adding a parallel system is a defect.</li>
+<li><strong>Reduced motion and hover gating ship with the animation</strong>, not as a follow-up.</li>
+<li><strong>Cheapest tool that works.</strong> Don&#39;t install a motion library for a fade.</li>
+</ol>
+<h3 id="the-build-sequence">The Build Sequence</h3>
+<h4 id="1-should-this-animate-at-all">1. Should this animate at all?</h4>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table><thead><tr><th>Frequency</th><th>Decision</th></tr></thead><tbody><tr><td>100+ times/day (keyboard shortcuts, command palette toggle)</td><td><strong>No animation. Ever.</strong> Stop here.</td></tr><tr><td>Tens of times/day (hover effects, list navigation)</td><td>Near-imperceptible only — fast and subtle, or nothing</td></tr><tr><td>Occasional (modals, drawers, toasts)</td><td>Standard animation</td></tr><tr><td>Rare / first-time (onboarding, success, celebration)</td><td>The delight budget lives here</td></tr></tbody></table></div><p><strong>Keyboard-initiated actions are a disqualifier, not a judgment call.</strong> Raycast has no open/close animation — that is correct for something opened hundreds of times a day.</p>
+<p>If the request fails this gate, say so plainly and don&#39;t write the animation. Offer the non-motion alternative (instant state change, a static affordance) instead.</p>
+<h4 id="2-what-is-the-purpose">2. What is the purpose?</h4>
+<p>Name it in one of these words before continuing:</p>
+<ul>
+<li><strong>Feedback</strong> — confirming the interface heard the user</li>
+<li><strong>Spatial consistency</strong> — showing where something came from or went</li>
+<li><strong>State indication</strong> — making a state change legible</li>
+<li><strong>Preventing a jarring change</strong> — bridging content that would otherwise teleport</li>
+<li><strong>Explanation</strong> — demonstrating how something works (marketing/onboarding only)</li>
+<li><strong>Delight</strong> — allowed <em>only</em> at the rare/first-time tier</li>
+</ul>
+<p>Can&#39;t name it? Don&#39;t build it. &quot;It looks cool&quot; on a frequently-seen element is a reason to stop.</p>
+<p>Also check <strong>function</strong>: data the user is reading or acting on should not move for style. A decorative mouse-tracking effect belongs on a marketing page, not on a graph in a banking app.</p>
+<h4 id="3-pick-the-tool-cheapest-that-works">3. Pick the tool — cheapest that works</h4>
+<p>Walk down; stop at the first that fits.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table><thead><tr><th>Need</th><th>Tool</th></tr></thead><tbody><tr><td>Hover, press, color, a state toggle you control with a class or attribute</td><td><strong>CSS transition</strong></td></tr><tr><td>Entry animation on mount, no JS state</td><td><strong>CSS <code>@starting-style</code></strong></td></tr><tr><td>Predetermined motion that must stay smooth while the page is busy loading</td><td><strong>CSS animation</strong> (runs off the main thread)</td></tr><tr><td>Programmatic control with CSS performance, no library</td><td><strong>WAAPI</strong> (<code>element.animate()</code>)</td></tr><tr><td>Springs, layout animations, exit animations, gesture-driven values</td><td><strong>Motion</strong> (<code>motion.dev</code>)</td></tr></tbody></table></div><p>CSS animations beat JS under load — they run off the main thread, while <code>requestAnimationFrame</code>-based animation drops frames while the browser loads, scripts, or paints. Use CSS for predetermined motion, JS for dynamic and interruptible motion.</p>
+<p>If the task needs a <em>component</em> rather than an animation — a toast, a drawer, a command menu, a dropdown — stop and invoke <code>pick-ui-library</code>. Hand-rolling those is how you end up with a <code>&lt;div&gt;</code> dropdown and no focus management.</p>
+<h4 id="4-pick-the-properties">4. Pick the properties</h4>
+<ul>
+<li><strong><code>transform</code> and <code>opacity</code> only.</strong> They skip layout and paint and run on the GPU. <code>width</code>/<code>height</code>/<code>margin</code>/<code>padding</code>/<code>top</code>/<code>left</code> trigger all three. (<code>clip-path</code> is the sanctioned fourth — see RECIPES.md. <code>height</code> is tolerated only for accordions, where there&#39;s no transform equivalent.)</li>
+<li><strong>Never <code>scale(0)</code>.</strong> Start from <code>scale(0.9–0.97)</code> + <code>opacity: 0</code>. Nothing in the real world appears from nothing.</li>
+<li><strong><code>transform-origin</code> at the trigger</strong> for popovers, dropdowns, menus, tooltips — <code>var(--transform-origin)</code> in Base UI. <strong>Modals are exempt</strong>; they&#39;re not anchored to a trigger, so they stay centered.</li>
+<li><strong>Percentages in <code>translate()</code></strong> are relative to the element&#39;s own size — <code>translateY(100%)</code> moves by its own height whatever the content. Prefer over hardcoded pixels.</li>
+<li><strong>In Motion, newest versions hardware accelerate independent transforms like <code>x</code>/<code>y</code>/<code>scale</code>/<code>rotate</code>.</strong></li>
+</ul>
+<pre><code class="language-jsx">&lt;motion.div animate={{ x: 100 }} /&gt;                          // motion 14.2+: hardware accelerated
+&lt;motion.div animate={{ transform: &quot;translateX(100px)&quot; }} /&gt;  // hardware accelerated in every version
+</code></pre>
+<ul>
+<li><strong>Never drive a child&#39;s transform from a CSS variable on the parent</strong> — it recalculates styles for every child. Set <code>transform</code> on the element directly.</li>
+</ul>
+<h4 id="5-easing-and-duration-or-a-spring">5. Easing and duration — or a spring</h4>
+<p><strong>Easing</strong>, in decision order:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table><thead><tr><th>Situation</th><th>Easing</th></tr></thead><tbody><tr><td>Entering or exiting</td><td><code>ease-out</code></td></tr><tr><td>Moving / morphing on screen</td><td><code>ease-in-out</code></td></tr><tr><td>Hover / color change</td><td><code>ease</code></td></tr><tr><td>Constant motion (marquee, progress)</td><td><code>linear</code></td></tr><tr><td>Default</td><td><code>ease-out</code></td></tr></tbody></table></div><p><strong>Never <code>ease-in</code> on UI.</strong> It starts slow, delaying the exact moment the user is watching. <code>ease-out</code> at 200ms <em>feels</em> faster than <code>ease-in</code> at 200ms.</p>
+<p>Built-in CSS easings are too weak. Use these:</p>
+<pre><code class="language-css">--ease-out: cubic-bezier(0.23, 1, 0.32, 1);        /* strong ease-out for UI */
+--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);    /* strong ease-in-out for on-screen movement */
+--ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);     /* iOS-like drawer curve (Ionic) */
+</code></pre>
+<p>Need a curve that isn&#39;t here? Take it from <a href="https://easing.dev/">easing.dev</a> or <a href="https://easings.co/">easings.co</a>. Don&#39;t hand-roll one.</p>
+<p><strong>Duration:</strong></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table><thead><tr><th>Element</th><th>Duration</th></tr></thead><tbody><tr><td>Button press feedback</td><td>100–160ms</td></tr><tr><td>Tooltips, small popovers</td><td>125–200ms</td></tr><tr><td>Dropdowns, selects</td><td>150–250ms</td></tr><tr><td>Modals, drawers</td><td>200–500ms</td></tr><tr><td>Marketing / explanatory</td><td>Can be longer</td></tr></tbody></table></div><p><strong>UI animations stay under 300ms.</strong> A 180ms dropdown feels more responsive than a 400ms one.</p>
+<p><strong>Reach for a spring instead</strong> when the motion is drag with momentum, an element that should feel alive, a gesture the user can interrupt or reverse, or decorative mouse-tracking:</p>
+<pre><code class="language-js">{ type: &quot;spring&quot;, duration: 0.5, bounce: 0.2 }        // Apple-style — easier to reason about
+{ type: &quot;spring&quot;, mass: 1, stiffness: 100, damping: 10 }  // traditional physics — more control
+</code></pre>
+<p>Keep bounce at 0.1–0.3, and avoid bounce in most UI — reserve it for drag-to-dismiss and playful interactions.</p>
+<h4 id="6-interruption-and-exit">6. Interruption and exit</h4>
+<ul>
+<li><strong>Transitions, not keyframes, for anything triggered rapidly</strong> — toasts, toggles, anything a user can fire twice in a second. Transitions retarget from the current value; keyframes restart from zero.</li>
+<li><strong>Springs for gestures</strong>, because they carry velocity through an interruption.</li>
+<li><strong>Exit the way it entered.</strong> A toast that slides in from the bottom leaves through the bottom. Symmetric paths are what make swipe-to-dismiss feel obvious.</li>
+<li><strong>Asymmetric timing where the user is deciding.</strong> Slow on the deliberate phase (a hold-to-confirm press: 2s linear), snappy on the system response (release: 200ms ease-out).</li>
+</ul>
+<h4 id="7-reduced-motion-and-pointer-gating">7. Reduced motion and pointer gating</h4>
+<p>Ships with the animation, every time.</p>
+<pre><code class="language-css">@media (prefers-reduced-motion: reduce) {
+  .element { animation: fade 0.2s ease; } /* keep opacity/color, drop transform-based motion */
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .element:hover { transform: scale(1.05); } /* touch fires false hovers on tap */
+}
+</code></pre>
+<pre><code class="language-jsx">const reduce = useReducedMotion();
+const closedX = reduce ? 0 : &#39;-100%&#39;;
+</code></pre>
+<p>Reduced motion means <strong>fewer and gentler</strong> animations, not zero — keep transitions that aid comprehension, remove movement and position changes.</p>
+<h3 id="recipes">Recipes</h3>
+<p>For ready-to-build implementations of the common cases — button press, dropdown, tooltip, modal, drawer, toast, accordion, stagger, hold-to-confirm, tab indicator, scroll reveal, drag-to-dismiss — see <a href="https://github.com/Playful-Design/router/blob/51acd8d581c1a64f7b6d91aeb3a800c4671883ac/skills/animate/RECIPES.md">RECIPES.md</a>. Load it whenever the request matches one of those components; start from the recipe rather than from a blank file.</p>
+<h3 id="never-ship">Never Ship</h3>
+<p>Self-check before you finish. Each of these is an automatic block in <code>review-animations</code>:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table><thead><tr><th>Never</th><th>Instead</th></tr></thead><tbody><tr><td><code>transition: all</code></td><td>Name the exact properties</td></tr><tr><td><code>transform: scale(0)</code> entrance</td><td><code>scale(0.95)</code> + <code>opacity: 0</code></td></tr><tr><td><code>ease-in</code> on a UI element</td><td><code>ease-out</code> or a strong custom curve</td></tr><tr><td>Built-in <code>ease-out</code> on a deliberate animation</td><td><code>cubic-bezier(0.23, 1, 0.32, 1)</code></td></tr><tr><td>Animation on a keyboard shortcut or 100+/day action</td><td>No animation</td></tr><tr><td>UI duration over 300ms with no reason</td><td>150–250ms</td></tr><tr><td><code>transform-origin: center</code> on a trigger-anchored popover</td><td><code>var(--transform-origin)</code> (modals exempt)</td></tr><tr><td>Keyframes on toasts, toggles, rapidly-triggered elements</td><td>CSS transitions</td></tr><tr><td>Animating <code>width</code>/<code>height</code>/<code>margin</code>/<code>padding</code>/<code>top</code>/<code>left</code></td><td><code>transform</code> / <code>opacity</code></td></tr><tr><td>Motion <code>x</code>/<code>y</code>/<code>scale</code> props under load on versions before 14.2</td><td>Upgrade to 14.2+, or a full <code>transform</code> string</td></tr><tr><td>Ungated <code>:hover</code> motion</td><td><code>@media (hover: hover) and (pointer: fine)</code></td></tr><tr><td>Missing <code>prefers-reduced-motion</code></td><td>Gentler variant, not zero</td></tr><tr><td>Everything entering at once</td><td>30–80ms stagger</td></tr></tbody></table></div><h3 id="output">Output</h3>
+<p>Write the code. Then, in at most a few lines:</p>
+<ul>
+<li><strong>The gate result</strong> — frequency tier and the named purpose. If something in the request was rejected, say which and why.</li>
+<li><strong>The ingredients</strong> — tool, properties, curve, duration or spring config, in one line each.</li>
+<li><strong>What to feel-check</strong> — if the result depends on feel you can&#39;t judge from code (a crossfade, a spring&#39;s bounce, the opacity/height balance in an entering list), say so and point at the check: play it at 2–5× duration or in the DevTools animation inspector, step it frame by frame, test gestures on a real device, and look again the next day with fresh eyes.</li>
+</ul>
+<p>Don&#39;t pad this into a report. The code is the deliverable.</p>
+<h3 id="tone">Tone</h3>
+<p>Opinionated and brief. When the honest answer is &quot;this shouldn&#39;t animate,&quot; give it — that answer is the reason this skill exists. When feel genuinely can&#39;t be settled from code, say so instead of guessing at a value.</p>
+</article><aside class="skill-tools" aria-label="Get this skill"><h2>Use this skill</h2><p class="tool-note">Install the full folder, including supporting files.</p><div class="terminal"><span class="terminal-sigil" aria-hidden="true">$</span><code tabindex="0" aria-label="Copy install command for Animate">npx skills add kevingsp/kevingsp.github.io --skill animate</code><button type="button" class="copy-button" data-copy="npx skills add kevingsp/kevingsp.github.io --skill animate" aria-label="Copy install command for Animate"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg><span>Copy</span></button></div><a class="button primary" href="/skills/raw/animate.txt" download="SKILL.md"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg> Download Markdown</a><p class="download-note">Markdown contains the instructions. Use the install command or <a href="/skills/downloads/nyshift-design-skills-51acd8d.zip" download>complete ZIP</a> for references and assets.</p><div class="skill-meta"><div><span>Author</span><a href="https://github.com/emilkowalski/skills">Emil Kowalski</a></div><div><span>Files in folder</span><span>3</span></div><div><span>Collection version</span><a href="https://github.com/Playful-Design/router/tree/51acd8d581c1a64f7b6d91aeb3a800c4671883ac"><code>51acd8d</code></a></div><div><span>License</span><a href="/skills/licenses/animate.txt">Included license <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div><div class="tool-links"><a href="https://github.com/kevingsp/kevingsp.github.io/tree/master/.agents/skills/animate">Files in your repo <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a href="https://github.com/Playful-Design/router/blob/51acd8d581c1a64f7b6d91aeb3a800c4671883ac/skills/animate/SKILL.md">Pinned source <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a href="/skills/raw/animate.txt">View raw Markdown <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><button type="button" class="text-button" data-copy="https://nyshift.com/skills/raw/animate.txt">Copy raw URL <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg></button></div></aside></div><nav class="skill-pagination" aria-label="More skills"><a href="/skills/alignment/"><span>← Previous</span><strong>Alignment</strong></a><a href="/skills/animate-expo/"><span>Next →</span><strong>Animate for Expo</strong></a></nav></main><footer class="site-footer"><div><a href="/">NYshift</a><span>Collected for the next thing you make.</span></div><p>Skills by their original authors. Curated through <a href="https://www.playfuldesign.app/skills">Playful Design</a>.</p><a href="/skills/llms.txt">For agents <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></footer><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></body></html>

@@ -1,0 +1,1 @@
+{"name":"nyshift-skills-library","private":true,"scripts":{"build":"python3 build.py && node render.cjs"},"devDependencies":{"marked":"17.0.5"}}

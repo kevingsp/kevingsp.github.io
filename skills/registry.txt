@@ -1,0 +1,44 @@
+alignment	https://nyshift.com/skills/raw/alignment.txt	Measure spacing, edges, centering, and visual weight in a running page.
+animate	https://nyshift.com/skills/raw/animate.txt	Build purposeful web animations, from the first decision to the final frame.
+animate-expo	https://nyshift.com/skills/raw/animate-expo.txt	Author native motion and gestures with Expo and Reanimated.
+animation-performance	https://nyshift.com/skills/raw/animation-performance.txt	Find dropped frames and keep motion within the rendering budget.
+animation-vocabulary	https://nyshift.com/skills/raw/animation-vocabulary.txt	Find the right name for the motion you have in mind.
+apple-design	https://nyshift.com/skills/raw/apple-design.txt	Apply physical gestures, springs, materials, and typography to interfaces.
+ask-sonner	https://nyshift.com/skills/raw/ask-sonner.txt	Build and troubleshoot React toast notifications with Sonner.
+audit	https://nyshift.com/skills/raw/audit.txt	Get a ranked review across the full interface skills collection.
+avatar	https://nyshift.com/skills/raw/avatar.txt	Turn an object into an expressive, animated character.
+blank-page	https://nyshift.com/skills/raw/blank-page.txt	Turn a one-line creative brief into a grounded motion direction.
+bots	https://nyshift.com/skills/raw/bots.txt	Build a portfolio for the Grok Bots you choose to share.
+break-ui	https://nyshift.com/skills/raw/break-ui.txt	Stress-test a screen with realistic worst-case data.
+color	https://nyshift.com/skills/raw/color.txt	Check contrast, semantic color roles, and dark-mode palettes.
+copy	https://nyshift.com/skills/raw/copy.txt	Write short, clear labels and interface descriptions.
+deconstruct	https://nyshift.com/skills/raw/deconstruct.txt	Break an interaction into states and a timeline you can inspect.
+defaults	https://nyshift.com/skills/raw/defaults.txt	Establish the details that make a screen feel finished.
+emil-design-eng	https://nyshift.com/skills/raw/emil-design-eng.txt	Review UI craft, polish, component details, and motion decisions.
+find-animation-opportunities	https://nyshift.com/skills/raw/find-animation-opportunities.txt	Find the few moments where motion would actually help.
+frames	https://nyshift.com/skills/raw/frames.txt	Measure interaction performance and prove the improvement.
+gather	https://nyshift.com/skills/raw/gather.txt	Collect visual references before starting a design.
+icons	https://nyshift.com/skills/raw/icons.txt	Fill gaps in an icon set while keeping its existing style.
+improve-animations	https://nyshift.com/skills/raw/improve-animations.txt	Audit motion and write practical implementation plans.
+keyboard	https://nyshift.com/skills/raw/keyboard.txt	Check an interface using only the keyboard.
+lab	https://nyshift.com/skills/raw/lab.txt	Show real components, variants, and states in one temporary workspace.
+match	https://nyshift.com/skills/raw/match.txt	Recreate a reference from measured values and compare the result.
+mobile-native	https://nyshift.com/skills/raw/mobile-native.txt	Polish mobile web behavior, touch targets, scrolling, and safe areas.
+motion	https://nyshift.com/skills/raw/motion.txt	Set consistent durations, easing, gestures, and reduced-motion behavior.
+pick-ui-library	https://nyshift.com/skills/raw/pick-ui-library.txt	Choose a maintained library for a specific interface problem.
+playful-design-router	https://nyshift.com/skills/raw/playful-design-router.txt	Choose the right design skill for the task at hand.
+prose	https://nyshift.com/skills/raw/prose.txt	Write clear posts, case studies, and design breakdowns.
+prototype	https://nyshift.com/skills/raw/prototype.txt	Compare several working design directions before choosing one.
+remove-animations	https://nyshift.com/skills/raw/remove-animations.txt	Remove motion that makes an interface slower or harder to use.
+restraint	https://nyshift.com/skills/raw/restraint.txt	Keep changes small, purposeful, and easy to review.
+reuse	https://nyshift.com/skills/raw/reuse.txt	Build with the project’s existing components and conventions.
+review-animations	https://nyshift.com/skills/raw/review-animations.txt	Give motion code a focused, demanding second look.
+rule	https://nyshift.com/skills/raw/rule.txt	Turn a recurring correction into a clear project rule.
+scope	https://nyshift.com/skills/raw/scope.txt	Finish the requested work while preserving what already works.
+ship	https://nyshift.com/skills/raw/ship.txt	Release a change, watch the checks, and confirm it is live.
+sketchbook	https://nyshift.com/skills/raw/sketchbook.txt	Explore small interaction ideas in a reusable visual workspace.
+stageshow	https://nyshift.com/skills/raw/stageshow.txt	Create believable product illustrations and animated walkthroughs.
+verify	https://nyshift.com/skills/raw/verify.txt	Check the running result before calling the work done.
+viewports	https://nyshift.com/skills/raw/viewports.txt	Check responsive layouts, breakpoint edges, and enlarged text.
+web-design-guidelines	https://nyshift.com/skills/raw/web-design-guidelines.txt	Review accessibility, forms, focus, motion, and interface behavior.
+write-swift	https://nyshift.com/skills/raw/write-swift.txt	Write modern Swift with clear models and safe concurrency.

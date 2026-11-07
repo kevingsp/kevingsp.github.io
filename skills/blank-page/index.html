@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0e0c"><title>Blank page | NYshift</title><meta name="description" content="Turn a one-line creative brief into a grounded motion direction."><link rel="canonical" href="https://nyshift.com/skills/blank-page/"><meta property="og:title" content="Blank page | NYshift"><meta property="og:description" content="Turn a one-line creative brief into a grounded motion direction."><meta property="og:type" content="website"><meta property="og:url" content="https://nyshift.com/skills/blank-page/"><link rel="icon" href="/assets/nyshift/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/skills/style.css?v=1"><script defer src="/skills/app.js?v=1"></script></head>
+<body class="skills-page detail-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="NYshift home"><img src="/assets/nyshift/mark.svg" width="28" height="28" alt=""><span>NYshift<span class="brand-dot">.</span></span></a><nav aria-label="Main navigation"><a href="/skills/">Skills</a><a href="/lab/">The Lab</a><a class="github-link" href="https://github.com/kevingsp/kevingsp.github.io/tree/master/.agents/skills">GitHub <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></nav></div></header>
+<main id="main" class="detail-main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/skills/">Skills</a><span aria-hidden="true">/</span><a href="/skills/?category=Motion">Motion</a><span aria-hidden="true">/</span><span>Blank page</span></nav><div class="detail-heading"><p class="eyebrow">MOTION <span>/ 09</span></p><h1>Blank page<span>.</span></h1><p>Turn a one-line creative brief into a grounded motion direction.</p><div class="detail-byline"><a href="https://github.com/StewdioAI/blank-page">By Stewdio <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div><div class="reading-layout"><article class="skill-content" aria-label="Skill instructions"><h2 id="blank-page">Blank page</h2>
+<p>Turn a short draft into the brief its author would have written. The drafts are usually
+Stewdio composition work (motion, 3D, shaders, footage); the method applies to any
+generative brief.</p>
+<p><strong>A good brief is references plus beats.</strong> The idea lives in the thing pointed at
+(<code>recreate this &lt;mp4&gt;</code>, <code>in the texture of embroidery &lt;img&gt;</code>) and the beats say what
+turns into what: a committed look, a copied move, a real thing, and a turn. Not more
+words, not more numbers. The voice is lowercase, imperative, numbered, no filler. A new
+brief stays under ~150 words counted above <code>refs:</code>, an edit note under ~50; over the
+cap, drop the optional lines (realism, params, a frame line restating a default) before
+tightening, never a beat or the turn.</p>
+<p>Files in <code>references/</code>:</p>
+<ul>
+<li><code>finding-references.md</code>: roles, the fence, are.na seeds and loop, Pinterest,
+Sketchfab, vetting. Read before step 2.</li>
+<li><code>vocabulary.md</code>: the author&#39;s own words, per slot. Borrow while writing.</li>
+<li><code>examples.md</code>: before / after pairs from real sessions. Read when unsure of the shape.</li>
+<li><code>patterns.md</code>: corpus evidence and past failures behind the rules. Optional.</li>
+</ul>
+<h3 id="procedure">Procedure</h3>
+<ol>
+<li><p><strong>Classify the draft.</strong></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table><thead><tr><th>mode</th><th>signal</th><th>output shape</th></tr></thead><tbody><tr><td>brief</td><td>&quot;create&quot;, &quot;recreate&quot;, a new comp or scene</td><td>aesthetic line + numbered beats + frame line + refs + assets</td></tr><tr><td>batch</td><td>&quot;create N comps&quot;, &quot;variations&quot;, &quot;fill the gaps&quot;</td><td>brief + per-item one-liners + dedupe rule + shared constraints</td></tr><tr><td>delta</td><td>&quot;make X more/less Y&quot;, &quot;get rid of&quot;, &quot;fix&quot;, &quot;move to&quot;</td><td>target + change + magnitude + direction + keep-clause</td></tr><tr><td>image feedback</td><td>a screenshot / contact sheet is attached</td><td>one line per observation, each naming its frame or time</td></tr><tr><td>sequence</td><td>&quot;at Ns&quot;, &quot;after the X exits&quot;, beats across time</td><td>brief with a time anchor on every beat, duration cap</td></tr><tr><td>housekeeping</td><td>rename, push, export, &quot;check the render&quot;</td><td>leave as is; add the exact format or target</td></tr></tbody></table></div><p>Brief, batch and sequence go through steps 2-8. Delta and image feedback skip to
+step 6, searching only when the change brings in a new look or move.</p>
+</li>
+<li><p><strong>Ground the look: five images, before any beat.</strong> One aesthetic, sheeted, and
+five stills from it that each do a job: the overall look, palette, material or
+surface, composition, a detail or motif. Never blend two aesthetics; if a second
+keeps winning tiles, switch to it wholesale. Its name goes in the prompt&#39;s first
+line.</p>
+<ul>
+<li><strong>No fence</strong> (the draft says nothing about the look): browse his umbrellas and
+CARI&#39;s named aesthetics and pick for remarkable, not for matching the draft&#39;s
+words.</li>
+<li><strong>A fence</strong> (the draft names a style, a brand or a medium, or attaches a
+reference): the word is the are.na query and the pick is the best instance
+inside it, never a different aesthetic and never a screenshot of it. It fences
+palette, material, type and components, not layout, scale, camera or the move.
+The first line names a child of the user&#39;s word (<code>in stripe-gradient dark</code>).
+How to decode and query it, and what to do when the queries come back as junk:
+&quot;The fence&quot; in <code>finding-references.md</code>.</li>
+</ul>
+</li>
+<li><p><strong>Ground the motion: three moving references.</strong> gif / mp4 from the motion channels,
+each a move worth copying (&quot;would he put this in mo-graph?&quot;), covering three jobs:
+the main mechanic, the turn, the exit or camera. If no exit or camera move passes
+after three channels, m3 takes another beat and the camera is written in words.
+<strong>The fence never applies to motion.</strong> Then, as the beats need them: a copy
+reference or asset for anything recognisable (a real UI, product, artwork, a
+Sketchfab model) and a ui reference for interfaces. A user attachment fills its
+slot. Look at every candidate before it gets a role.</p>
+</li>
+<li><p><strong>Decide each reference&#39;s use, then write the beats.</strong> For all eight: which beat
+it feeds and exactly what is taken (<code>a3&#39;s wet-stone texture is the canvas surface</code>,
+<code>m1 0.0-1.6s is beat 1 at 1.5x slower, subject swapped for cards</code>). A reference
+with no beat is cut. The motion refs give the beats their order and timing; each
+image sits on the beat where its quality first shows. Include <strong>the turn</strong>: a beat
+where something is revealed, changes medium, zooms out to a larger whole, or
+becomes something else (<code>the painting unravels into a single thread which becomes a running silhouette</code>). Enter, animate, hold is not finished. When the draft
+already holds a transformation (<code>snaps into</code>, <code>comes back as</code>), that verb is the
+turn: make it the biggest beat and add no second metaphor. A ≤5 s clip carries one
+idea (extra ideas go into the material and the camera, not the plot) and the action
+fills it: end hold under 1 s; a turn over by 1.6 s means compressed beats or a
+missing second half.</p>
+</li>
+<li><p><strong>Add ideas.</strong> On a bare draft, expected: a prop that makes the subject specific, a
+real asset, a camera move tied to a reveal, a second beat that answers the first.
+Write them as beats; mark the one or two real forks <code>[? ...]</code>.</p>
+</li>
+<li><p><strong>Fill the slots</strong> (checklist below). Inferable from the file, the previous comp,
+an attachment or the conversation: silently. Missing and creative: a
+<code>[? best default]</code> placeholder in the prompt. Missing and routine (duration,
+aspect, file): default it inline, no marker; no file named means
+<code>in stewdio, new file &lt;topic&gt;,</code>.</p>
+</li>
+<li><p><strong>Rewrite in the house shape</strong> (templates below), keeping the author&#39;s wording
+where it exists.</p>
+</li>
+<li><p><strong>Output</strong> three things and nothing else: the prompt in a fenced block; a
+&quot;fill-ins&quot; list (max three creative forks, each with the choice made and the one
+alternative worth considering; never duration, loop or aspect); one line pointing
+at <code>.context/refs/&lt;topic&gt;/</code> with the contact sheets so the user can veto a pick.
+<code>&lt;topic&gt;</code> is a two- or three-word kebab slug of the subject (<code>coffee-menu</code>). If a
+real thing is needed and absent (the user&#39;s own app, product, logo), say so in one
+line above the prompt and name the stand-in used. No technique, no advice.</p>
+</li>
+</ol>
+<h3 id="slot-checklist">Slot checklist</h3>
+<p>Opener slots first; they decide the result. Edit-loop slots after.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table><thead><tr><th>slot</th><th>ask</th><th>house form</th></tr></thead><tbody><tr><td>where</td><td>tool, file, comp; for sequences the time or beat it attaches to</td><td><code>in stewdio, &lt;file&gt;, &lt;comp&gt;, at 3.5s:</code> / <code>after the sticker exits:</code></td></tr><tr><td>look</td><td>one aesthetic, named, from a1; a child of the user&#39;s word when there is one</td><td><code>in frutiger aero style</code> / <code>everything in riso</code></td></tr><tr><td>medium / technique</td><td>photo or footage, 3D rebuild, vector, shader, real model</td><td><code>using threejs or 3d framework</code> / <code>real 3d texture and train models</code></td></tr><tr><td>move</td><td>the mechanic from the motion ref, subject swapped</td><td><code>recreate this animation, but make it nyc subway</code></td></tr><tr><td>subject</td><td>the real thing, by name, with its source</td><td><code>the famous ukiyo-e painting &lt;img&gt;</code></td></tr><tr><td>beats</td><td>numbered; each = subject + action + what it reveals or becomes</td><td><code>2. then at around 2s, a big wave splats across the screen, turning the entire screen into a new texture</code></td></tr><tr><td>turn</td><td>the reveal / morph / zoom-out / medium switch</td><td><code>the camera zooms out to reveal that ...</code></td></tr><tr><td>realism</td><td>fidelity demand when it matters</td><td><code>it should be very realistic</code> / <code>loyal to the og</code></td></tr><tr><td>camera</td><td>move + easing + what it lands on</td><td><code>camera zooms fast into the pupil, steep quadratic ease-in</code> / <code>camera stays still</code></td></tr><tr><td>pace</td><td>the feel in his words, seconds only for anchors</td><td><code>very snappy, ease-in-out</code> / <code>one continuous motion from the start</code></td></tr><tr><td>frame</td><td>bg, aspect, duration, loop, only where it differs from the defaults</td><td><code>white bg, 1:1, ~5s loop</code></td></tr><tr><td>params</td><td>values to expose when the comp will be tuned</td><td><code>expose params for plumpness, sheen, glow</code></td></tr><tr><td>keep</td><td>edits: what must not change</td><td><code>keep the old entrance speed</code> / <code>keep the rest the same</code></td></tr><tr><td>magnitude + direction</td><td>edits: multiplier, phase, axis and sense</td><td><code>2x faster at top speed</code> / <code>30 degree clockwise</code></td></tr><tr><td>scope</td><td>edits: which comps the change touches</td><td><code>only for 23</code> / <code>unrelated: also ...</code></td></tr></tbody></table></div><p><strong>Standing defaults</strong>, never written out: white bg (black for the math-graph family);
+no fade, drop shadow, rounded corners, annotation text, UI chrome or guiding lines; 1:1
+for social posts, 16:9 for the graph and carousel families; ~5 s for a loop, 3-4 s for
+an inserted beat, under 15-20 s for a sequence; real assets for recognisable objects,
+stylised on top. The look outranks them: an aesthetic with its own ground (paper
+stock, a counter, dark-mode navy) replaces the white bg on the frame line, and light
+that belongs to the look (raking light across paper) is not a drop shadow.</p>
+<h3 id="templates">Templates</h3>
+<p><strong>Brief</strong></p>
+<pre><code>in stewdio, &lt;file&gt;, [&lt;comp&gt;,] [at &lt;N&gt;s / after &lt;beat&gt;,] create the following, in &lt;aesthetic from a1&gt;[, using &lt;technique&gt;]:
+
+1. &lt;subject (c1 / asset), its state at 0s&gt; &lt;enters like m1: mechanic&gt;
+2. &lt;main action from m1, subject swapped&gt; [at ~&lt;N&gt;s]
+3. &lt;the turn: reveals / turns into / zooms out to show ...&gt;
+4. &lt;exit or end state&gt;
+
+&lt;realism demand if it matters&gt;; &lt;camera if it moves&gt;; &lt;pace in his words&gt;
+&lt;frame only where it differs from the defaults&gt;; the whole thing ~&lt;N&gt;s
+[expose params for &lt;list&gt;]
+
+refs:
+- a1 &lt;path&gt;: look, &lt;what it sets: overall look, framing of beat 1&gt; (&lt;url&gt;, channel &lt;slug&gt;)
+- a2 &lt;path&gt;: palette, &lt;used where&gt; (&lt;url&gt;, channel &lt;slug&gt;)
+- a3 &lt;path&gt;: material, &lt;which surface in which beat&gt; (&lt;url&gt;, channel &lt;slug&gt;)
+- a4 &lt;path&gt;: composition, &lt;which beat&#39;s frame&gt; (&lt;url&gt;, channel &lt;slug&gt;)
+- a5 &lt;path&gt;: detail, &lt;which element, which beat&gt; (&lt;url&gt;, channel &lt;slug&gt;)
+- m1 &lt;path&gt;: motion, beat &lt;n&gt;: &lt;mechanic, time range taken, scale factor&gt;, subject swapped, not the look (&lt;url&gt;, channel &lt;slug&gt;)
+- m2 &lt;path&gt;: motion, beat &lt;n&gt;[ (the turn)]: &lt;what is taken&gt; (&lt;url&gt;, channel &lt;slug&gt;)
+- m3 &lt;path&gt;: motion, beat &lt;n&gt;[ (the turn)]: &lt;what is taken&gt; (&lt;url&gt;, channel &lt;slug&gt;)
+- u1 &lt;path&gt;: ui, &lt;ui type&gt; layout + components, brand-neutral (&lt;url&gt;, channel &lt;slug&gt;)
+- c1 &lt;path&gt;: copy, &lt;subject&gt;, one-to-one (&lt;url&gt;)
+assets:
+- &lt;path or url&gt;: use as-is for &lt;what&gt;
+- &lt;sketchfab page&gt; (&lt;author&gt;, &lt;licence&gt;, &lt;faces&gt;): &lt;object&gt;, one-to-one, &lt;parts that must move&gt; [? download]
+</code></pre>
+<p>Beats cite handles inline (<code>2. the sticker peels from the lower-left corner like m1, on a3&#39;s wet stone</code>); every handle in <code>refs:</code> appears in a beat. Motion handles are
+numbered in beat order, and the one feeding the turn is marked <code>(the turn)</code>. Add <code>orig &lt;url&gt;</code> after
+the channel when the block has a source. User attachments go in the same list.</p>
+<p><strong>Batch</strong></p>
+<pre><code>in &lt;file&gt;, create &lt;N&gt; &lt;things&gt;, &lt;one-line shared description&gt;, using &lt;channel&gt; as reference:
+
+1. &lt;item: mechanic + orientation + layout&gt;
+2. ...
+
+for all of them: &lt;shared constraints&gt;; keep each ~&lt;N&gt;s
+no overlap with &lt;existing set&gt;; a valid variation changes the mechanic, orientation, layout or treatment, not just direction or mirror
+name them &quot;&lt;Prefix&gt;: [&lt;k&gt; word description]&quot;
+</code></pre>
+<p><strong>Delta</strong>: one change per line, numbered when several, each naming its target;
+&quot;unrelated:&quot; marks a different comp.</p>
+<pre><code>[for &lt;comp&gt;,] make &lt;element&gt; &lt;change&gt; &lt;magnitude&gt; [&lt;direction with axis&gt;] [at &lt;N&gt;s]
+[get rid of &lt;element&gt;]
+keep &lt;what must stay&gt;
+</code></pre>
+<p><strong>Image feedback</strong>: <code>&lt;frame or time it points at&gt;: &lt;one observation, quantified&gt;</code>, one
+line each.</p>
+<h3 id="rules">Rules</h3>
+<ul>
+<li><strong>Pick for quality, not for match.</strong> The most striking move or look that could
+carry the subject beats a keyword hit that shows the right object.</li>
+<li><strong>A film frame, not a web page.</strong> One hero element takes ≥40% of the frame height at
+the beat it matters; the smallest text is ≥24 px at 1080p; nothing is rebuilt at 1:1
+browser scale. Judge sheets at thumbnail size.</li>
+<li><strong>One reference, one job.</strong> Moving media for motion, stills for look; a motion ref
+implies a subject swap. A file used for two roles is listed twice, each scoped.</li>
+<li><strong>Assets are used, references are read.</strong> Real footage, a real GLB, the real UI, the
+real painting, stylised on top; say the fidelity up front and never re-interpret an
+uploaded asset. Procedural only for primitives, orbs, blobs, extrusions, noise fields
+and things that must grow or morph.</li>
+<li><strong>Treat each thing as a contraption.</strong> Animate its special mechanism (a lid closes,
+an envelope seals, a checkbox ticks), not a default draw-in. Transformations are
+in-process morphs, not a teardown and rebuild.</li>
+<li><strong>Describe the mechanism, not the adjective.</strong> &quot;editorial page-drag&quot; was built as a
+slide-in; &quot;the current image is peeled from a corner to reveal the new one already
+underneath&quot; was built right the first time.</li>
+<li><strong>Numbers where he uses them.</strong> Seconds for anchors and length, multipliers and
+degrees in edits, a hex only when the colour is the point (klein blue #002FA7). No
+ms staggers or px offsets in an opener.</li>
+<li><strong>Edits name an axis, a sense and a phase.</strong> &quot;the other way&quot; is not a direction;
+&quot;entrance 5x faster&quot; needs &quot;the fastest entrance we have had, constant speed after&quot;.</li>
+<li><strong>Keep the voice.</strong> &quot;get rid of&quot;, &quot;tho&quot;, &quot;~5s&quot;, &quot;plz&quot; are fine. No greetings,
+rationale or headings inside the prompt.</li>
+</ul>
+<h3 id="scripts">Scripts</h3>
+<p><code>scripts/find_refs.py</code>: are.na channels / umbrellas / contact sheets, Pinterest pins,
+Sketchfab search + download, file downloads, video contact sheets. Run it with no
+arguments for the command list.</p>
+</article><aside class="skill-tools" aria-label="Get this skill"><h2>Use this skill</h2><p class="tool-note">Install the full folder, including supporting files.</p><div class="terminal"><span class="terminal-sigil" aria-hidden="true">$</span><code tabindex="0" aria-label="Copy install command for Blank page">npx skills add kevingsp/kevingsp.github.io --skill blank-page</code><button type="button" class="copy-button" data-copy="npx skills add kevingsp/kevingsp.github.io --skill blank-page" aria-label="Copy install command for Blank page"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg><span>Copy</span></button></div><a class="button primary" href="/skills/raw/blank-page.txt" download="SKILL.md"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg> Download Markdown</a><p class="download-note">Markdown contains the instructions. Use the install command or <a href="/skills/downloads/nyshift-design-skills-51acd8d.zip" download>complete ZIP</a> for references and assets.</p><div class="skill-meta"><div><span>Author</span><a href="https://github.com/StewdioAI/blank-page">Stewdio</a></div><div><span>Files in folder</span><span>8</span></div><div><span>Collection version</span><a href="https://github.com/Playful-Design/router/tree/51acd8d581c1a64f7b6d91aeb3a800c4671883ac"><code>51acd8d</code></a></div><div><span>License</span><a href="/skills/licenses/blank-page.txt">Included license <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></div><div class="tool-links"><a href="https://github.com/kevingsp/kevingsp.github.io/tree/master/.agents/skills/blank-page">Files in your repo <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a href="https://github.com/Playful-Design/router/blob/51acd8d581c1a64f7b6d91aeb3a800c4671883ac/skills/blank-page/SKILL.md">Pinned source <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a href="/skills/raw/blank-page.txt">View raw Markdown <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><button type="button" class="text-button" data-copy="https://nyshift.com/skills/raw/blank-page.txt">Copy raw URL <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg></button></div></aside></div><nav class="skill-pagination" aria-label="More skills"><a href="/skills/avatar/"><span>← Previous</span><strong>Avatar</strong></a><a href="/skills/bots/"><span>Next →</span><strong>Bots</strong></a></nav></main><footer class="site-footer"><div><a href="/">NYshift</a><span>Collected for the next thing you make.</span></div><p>Skills by their original authors. Curated through <a href="https://www.playfuldesign.app/skills">Playful Design</a>.</p><a href="/skills/llms.txt">For agents <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></footer><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></body></html>
