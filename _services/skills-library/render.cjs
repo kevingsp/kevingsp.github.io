@@ -1,5 +1,6 @@
 const fs=require('node:fs'),path=require('node:path');
 const out=path.resolve(__dirname,'../../skills');
+const {socialHead}=require('../social-preview/head.cjs');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const command='npx skills add kevingsp/kevingsp.github.io';
 const icons={copy:'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>',arrow:'<path d="M7 17 17 7M7 7h10v10"/>',download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/>',search:'<circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 5 5"/>'};
@@ -8,7 +9,7 @@ const copy=(text,label='Copy command')=>`<button type="button" class="copy-butto
 const terminal=(text,label)=>`<div class="terminal"><span class="terminal-sigil" aria-hidden="true">$</span><code tabindex="0" aria-label="${esc(label)}">${esc(text)}</code>${copy(text,label)}</div>`;
 const logo='<a class="brand" href="/" aria-label="NYshift home"><img src="/assets/nyshift/mark.svg" width="28" height="28" alt=""><span>NYshift<span class="brand-dot">.</span></span></a>';
 function shell({title,description,body,url,detail=false}){return `<!doctype html>
-<html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0e0c"><title>${esc(title)} | NYshift</title><meta name="description" content="${esc(description)}"><link rel="canonical" href="https://nyshift.com${url}"><meta property="og:title" content="${esc(title)} | NYshift"><meta property="og:description" content="${esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="https://nyshift.com${url}"><link rel="icon" href="/assets/nyshift/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/skills/style.css?v=1"><script defer src="/skills/app.js?v=1"></script></head>
+<html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} | NYshift</title>${socialHead({title:title+' | NYshift',description,url})}<link rel="stylesheet" href="/skills/style.css?v=1"><script defer src="/skills/app.js?v=1"></script></head>
 <body class="skills-page${detail?' detail-page':''}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner">${logo}<nav aria-label="Main navigation"><a href="/skills/"${!detail?' aria-current="page"':''}>Skills</a><a href="/lab/">The Lab</a><a class="github-link" href="https://github.com/kevingsp/kevingsp.github.io/tree/master/.agents/skills">GitHub ${icon('arrow')}</a></nav></div></header>
 ${body}<footer class="site-footer"><div><a href="/">NYshift</a><span>Collected for the next thing you make.</span></div><p>Skills by their original authors. Curated through <a href="https://www.playfuldesign.app/skills">Playful Design</a>.</p><a href="/skills/llms.txt">For agents ${icon('arrow')}</a></footer><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></body></html>\n`;}
 (async()=>{

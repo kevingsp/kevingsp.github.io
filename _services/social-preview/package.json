@@ -1,0 +1,1 @@
+{"name":"nyshift-social-previews","private":true,"scripts":{"build":"node ../skills-library/render.cjs && node build.cjs && node render.cjs && python3 icons.py"},"devDependencies":{"playwright":"1.62.1"}}

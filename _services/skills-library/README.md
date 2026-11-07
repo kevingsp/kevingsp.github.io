@@ -36,3 +36,7 @@ Regenerate after deliberately updating the source skill collection. The current 
 - The viewport scanner's clipped `.sr-only` labels are intentional accessibility hiding. The contrast scanner flags the search input's borderless inner box; its visible enclosing label supplies the border and focus ring. Body text passed the composited contrast scan. The enclosing search border is measured separately against the field surface.
 - Marked escapes source HTML, renders remote images as links, and rejects unsafe link protocols. All 44 rendered articles were checked for injected executable elements or unsafe URLs.
 - A direct browser capture of ui-skills.com was blocked by the cloud browser's certificate trust; its live HTML/catalog was inspected through the trusted HTTP client. No pixel-exact matching claim is made. Physical phones, Safari and Firefox were not tested.
+
+## Social sharing
+
+The page shell uses `../social-preview/head.cjs` for shared icon links, canonical URLs and per-skill Open Graph/Twitter metadata. After changing card titles or descriptions, run the social-preview build as well to refresh its 1200×630 PNGs. Rebuilding the catalog preserves the social tags automatically.
